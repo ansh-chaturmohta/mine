@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            border:0;
+        }
+        body{
+            content:'';
+            text-align: center;
+            background-image: url("images/bgpro.jpg");
+            opacity:1;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color : black;
+            color:rgb(178, 176, 176);
+            font-family: 'Bebas Neue', cursive;
+            /* overflow: hidden; */
+        }
+        a{
+            color: rgb(178, 176, 176);
+            text-decoration: none;
+            text-transform: uppercase;
+            transition :all ease 0.7s;
+        }
+        a:hover{
+            color: #4cd4ca;
+            text-decoration: none;
+        }
+        .ml11 {
+            font-weight: 700;
+            font-size: 1em;
+        }
+        .ml11 .text-wrapper {
+            position: relative;
+            display: inline-block;
+            padding-top: 0.2em;
+            padding-right: 0.05em;
+            padding-bottom: 0.15em;
+        }
+        .ml11 .line {
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 3px;
+            background-color: #fff;
+            transform-origin: 0 50%;
+        }
+        .ml11 .line1 { 
+            top: 0; 
+            left: 0;
+        }
+        .ml11 .letter {
+            display: inline-block;
+            line-height: 1em;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div style="position: fixed;background-color:black;overflow:hidden;z-index:99;width:100%;">
+        <div style="color:white;font-size:65px;background-color:black;">
+            <h1 class="ml11">
+                <span class="text-wrapper">
+                  <span class="line line1"></span>
+                  <span class="letters">Projects</span>
+                </span>
+              </h1>
+        </div>
+        <a href="index.html">Back to landing page</a>
+    </div>
+    <h1 style="color:rgb(178, 176, 176);font-size:50px;text-align:left;padding-left:11%;padding-top:130px;z-index:1">Web Development</h1>
+    <div class="row" style="width:100%;">
+        <div class="col-lg-6" style="margin-left:20px;overflow:hidden;">
+            <video autoplay muted loop style="display: inline-block;width:60%;">
+                <source src="videos/kabaadkart.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="col-lg-5" style="text-align:center;margin-left:25px;color:rgb(178, 176, 176);">
+            <h2 style="color:#4cd4ca">Kabaad Kart</h2>
+                KabaadKart is a startup which tries to solve the problem of waste management and handling. To use this, one has to download the app and provide their address along with what scrap they want to sell, the workers of KabaadKart reach the location and collect the scrap and pay them accordingly. I made a website for this startup while I was working at Caerus Infotech solutions.
+            <h6 style="color:#4cd4ca;padding-top:10px">Tech Stacks : HTML,CSS,JS,JQuery,Bootstrap,Node.js,Express.js,Google Firebase.</h4>
+        </div>
+    </div>
+    <div class="row" style="width:100%;padding-top:40px;">
+        <div class="col-lg-6" style="margin-left:20px;overflow:hidden">
+            <video autoplay muted loop style="display: inline-block;width:60%;">
+                <source src="videos/chat.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="col-lg-5" style="text-align:center;margin-left:25px;color:rgb(178, 176, 176);">
+            <h2 style="color:#4cd4ca">Chat App</h2>
+            Chat application using socket.io, express.js and moment. Created a basic ChatApp in which the user can enter his/her desired Chat room name which creates a new room if not already exists and users who enter the same chat room name chat in that room, basically like a whatsapp group but you hvae to enter the chat room name each time you enter.
+            <h6 style="color:#4cd4ca;padding-top:10px">Tech Stacks : HTML,CSS,JS,JQuery,Bootstrap,Node.js,Express.js,Socket.io,Moment.</h4>
+            </div>
+    </div>
+    <div class="row" style="width:100%;padding-top:40px;">
+        <div class="col-lg-6" style="margin-left:20px;overflow:hidden;">
+            <video autoplay muted loop style="display: inline-block;width:60%;">
+                <source src="videos/ltt.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="col-lg-5" style="text-align:center;margin-left:25px;color:rgb(178, 176, 176);">
+            <h2 style="color:#4cd4ca">Learn To Thrive</h2>
+            Learn To Thrive is an organisation by students of IIT Kharagpur, with an aim to to maintain continuity among college students who are passionate and ambitious for learning. Initially started by 2 students of IIT Kharagpur, later recruited many more IITians to be a part of this as well. I was one of them who taught college students various things and during my time there I also made this website for the organisation.
+            <h6 style="color:#4cd4ca;padding-top:10px">Tech Stacks : HTML,CSS,JS,JQuery,Bootstrap.</h4>
+        </div>
+    </div>
+    <div class="row" style="width:100%;padding-top:40px;">
+        <div class="col-lg-6" style="margin-left:20px;overflow:hidden;">
+            <video autoplay muted loop style="display: inline-block;width:60%;">
+                <source src="videos/todo.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="col-lg-5" style="text-align:center;margin-left:25px;color:rgb(178, 176, 176);">
+            <h2 style="color:#4cd4ca">TODO List</h2>
+            I made a TODO List with the basic features along with a reminder property. When the due time for the task is less than 1 hour then the website plays a song and sends an alert on the window. The song is "Jaago mohan pyaare".
+            <h6 style="color:#4cd4ca;padding-top:10px">Tech Stacks : HTML,CSS,JS,JQuery,Bootstrap.</h4>
+        </div>
+    </div>
+    <div class="row" style="width:100%;padding-top:40px;">
+        <div class="col-lg-6" style="margin-left:20px;overflow:hidden;">
+            <video autoplay muted loop style="display: inline-block;width:60%;">
+                <source src="videos/Food1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="col-lg-5" style="text-align:center;margin-left:25px;color:rgb(178, 176, 176);">
+            <h2 style="color:#4cd4ca">Restaurant website</h2>
+            I am a foodie, and my father had a restaurant so I just wanted to make this restaurant website for the restaurant. A website with frontend and a prompt when you book a table.
+            <h6 style="color:#4cd4ca;padding-top:10px">Tech Stacks : HTML,CSS,JS,JQuery,Bootstrap.</h4>
+        </div>
+    </div>
+    <div class="row" style="width:100%;padding-top:40px;">
+        <div class="col-lg-6" style="margin-left:20px;overflow:hidden;">
+            <video autoplay muted loop style="display: inline-block;width:60%;">
+                <source src="videos/Food2.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="col-lg-5" style="text-align:center;margin-left:25px;color:rgb(178, 176, 176);">
+            <h2 style="color:#4cd4ca">Restaurant website - 2</h2>
+            So now it is esstablished that I am a foodie, couldn't resist making the website after looking at the delicious images so went ahead to make one.
+            <h6 style="color:#4cd4ca;padding-top:10px">Tech Stacks : HTML,CSS,JS,JQuery,Bootstrap.</h4>
+        </div>
+    </div>
+    <div class="row" style="width:100%;padding-top:40px">
+        <div class="col-lg-6" style="margin-left:20px;overflow:hidden;">
+            <video autoplay muted loop style="display: inline-block;width:60%;">
+                <source src="videos/dice.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="col-lg-5" style="text-align:center;margin-left:25px;color:rgb(178, 176, 176);">
+            <h2 style="color:#4cd4ca">Dice game</h2>
+            A dice game, which on refreshing the page generates two random numbers and shows that particular image and decides the winner on the basis of higher number obtained by the players.
+            <h6 style="color:#4cd4ca;padding-top:10px">Tech Stacks : HTML,CSS,JS,JQuery,Bootstrap.</h4>
+        </div>
+    </div>
+    <div class="row" style="width:100%;padding-top:40px">
+        <div class="col-lg-6" style="margin-left:20px;overflow:hidden;">
+            <image style="display: inline-block;width:60%;" src="images/drum.jpg" alt="Drum playing site">
+        </div>
+        <div class="col-lg-5" style="text-align:center;margin-left:25px;color:rgb(178, 176, 176);">
+            <h2 style="color:#4cd4ca">Drum playing website</h2>
+            Drum playing website. On pressing the particular keys on the keyboard or clicking on the images on the site, it plays the sound of the corresponding drum.
+            <h6 style="color:#4cd4ca;padding-top:10px">Tech Stacks : HTML,CSS,JS,JQuery,Bootstrap.</h4>
+        </div>
+    </div>
+    <div class="row" style="width:100%;padding-top:40px">
+        <div class="col-lg-6" style="margin-left:20px;overflow:hidden;">
+            <video autoplay muted loop style="display: inline-block;width:60%;">
+                <source src="videos/tshirt.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="col-lg-5" style="text-align:center;margin-left:25px;color:rgb(178, 176, 176);">
+            <h2 style="color:#4cd4ca">T-shirt selling website</h2>
+            T-shirt selling website, simple website only html css. My first project !
+            <h6 style="color:#4cd4ca;padding-top:10px">Tech Stacks : HTML,CSS</h4>
+        </div>
+    </div>
+    <h1 style="color:rgb(178, 176, 176);font-size:50px;text-align:left;padding-left:11%;padding-top:130px;z-index:1">Python / ML</h1>
+    <div class="row" style="width:100%;padding-top:40px">
+        <div class="col-lg-6" style="margin-left:20px;overflow:hidden;">
+            <video autoplay muted loop style="display: inline-block;width:60%;">
+                <source src="videos/handrecog.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="col-lg-5" style="text-align:center;margin-left:25px;color:rgb(178, 176, 176);">
+            <h2 style="color:#4cd4ca">Hand recognition</h2>
+            The model detects your hand and the tip of your thumb and index finger, this can be further used to do many things, by changing the distance between the tip of your index finger and thumb you can change the volume of your device among other uses of this.
+            <h6 style="color:#4cd4ca;padding-top:10px">Tech Stacks : Python,mediapipe,OpenCV</h4>
+        </div>
+    </div>
+    <div class="row" style="width:100%;padding-top:40px">
+        <div class="col-lg-6" style="margin-left:20px;overflow:hidden;">
+            <video autoplay muted loop style="display: inline-block;width:60%;">
+                <source src="videos/shortpath.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="col-lg-5" style="text-align:center;margin-left:25px;color:rgb(178, 176, 176);">
+            <h2 style="color:#4cd4ca">Shortest Path traversal</h2>
+            The standard problem for AI Car, to find a shortest path between two points with obstacles in between. The model traces checks all the possible paths and checks the shortest one and as soon as it findss the shortest path it backtracks it and highlights it in the images.
+            <h6 style="color:#4cd4ca;padding-top:10px">Tech Stacks : Python,mediapipe,OpenCV</h4>
+        </div>
+    </div>
+    <div class="row" style="width:100%;padding-top:40px">
+        <div class="col-lg-6" style="margin-left:20px;overflow:hidden;">
+            <video autoplay muted loop style="display: inline-block;width:60%;">
+                <source src="videos/gender.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="col-lg-5" style="text-align:center;margin-left:25px;color:rgb(178, 176, 176);">
+            <h2 style="color:#4cd4ca">Gender Classification</h2>
+            The model takes an image as the input and then using Neural Network identifies whether the given image was of a man or of a woman.
+            <h6 style="color:#4cd4ca;padding-top:10px">Tech Stacks : Python,Keras,tensorflow,numpy,pandas,matplotlib,seaborn,sklearn.</h4>
+        </div>
+    </div>
+    <div class="row" style="width:100%;padding-top:40px;padding-bottom:40px;">
+        <div class="col-lg-6" style="margin-left:20px;overflow:hidden;">
+            <image style="display: inline-block;width:60%;" src="images/stock.jpg" alt="Drum playing site">
+        </div>
+        <div class="col-lg-5" style="text-align:center;margin-left:25px;color:rgb(178, 176, 176);">
+            <h2 style="color:#4cd4ca">Stock Price prediction model</h2>
+            Drum playing website. On pressing the particular keys on the keyboard or clicking on the images on the site, it plays the sound of the corresponding drum.
+            <h6 style="color:#4cd4ca;padding-top:10px">Tech Stacks : Python,Keras,tensorflow,numpy,pandas,matplotlib,seaborn,sklearn.</h4>
+        </div>
+    </div>
+    
+    
+
+
+<!-- JQUERY     -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- LETTERING -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+<!-- ANIME JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<!-- Particle JS -->
+<script src="particles.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src="app.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script>
+    var textWrapper = document.querySelector('.ml11 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml11 .line',
+    scaleY: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 700
+  })
+  .add({
+    targets: '.ml11 .line',
+    translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+    easing: "easeOutExpo",
+    duration: 700,
+    delay: 100
+  }).add({
+    targets: '.ml11 .letter',
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=775',
+    delay: (el, i) => 34 * (i+1)
+  }).add({
+    targets: '.ml11',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+
+</body>
+</html>
