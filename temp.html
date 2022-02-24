@@ -11,29 +11,120 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-            border: 0;
-        }
+        @keyframes move-background {
+	 from {
+		 -webkit-transform: translate3d(0px, 0px, 0px);
+	}
+	 to {
+		 -webkit-transform: translate3d(1000px, 0px, 0px);
+	}
+}
+ @-webkit-keyframes move-background {
+	 from {
+		 -webkit-transform: translate3d(0px, 0px, 0px);
+	}
+	 to {
+		 -webkit-transform: translate3d(1000px, 0px, 0px);
+	}
+}
+ @-moz-keyframes move-background {
+	 from {
+		 -webkit-transform: translate3d(0px, 0px, 0px);
+	}
+	 to {
+		 -webkit-transform: translate3d(1000px, 0px, 0px);
+	}
+}
+ @-webkit-keyframes move-background {
+	 from {
+		 -webkit-transform: translate3d(0px, 0px, 0px);
+	}
+	 to {
+		 -webkit-transform: translate3d(1000px, 0px, 0px);
+	}
+}
+ .background-container {
+	 /* position: fixed; */
+	 top: 0;
+	 left: 0;
+	 bottom: 0;
+	 right: 0;
+}
+ .stars {
+	 background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+	 position: absolute;
+	 top: 0;
+	 bottom: 0;
+     height:165%;
+	 left: 0;
+	 right: 0;
+	 display: block;
+	 z-index: 0;
+}
+ .twinkling {
+	 width: 10000px;
+	 height: 100%;
+	 background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+	 background-size: 1000px 1000px;
+	 position: absolute;
+	 right: 0;
+	 top: 0;
+     opacity:0.1;
+	 bottom: 0;
+	 z-index: 2;
+	 -moz-animation: move-background 70s linear infinite;
+	 -ms-animation: move-background 70s linear infinite;
+	 -o-animation: move-background 70s linear infinite;
+	 -webkit-animation: move-background 70s linear infinite;
+	 animation: move-background 70s linear infinite;
+}
+ .clouds {
+	 width: 10000px;
+	 height: 100%;
+	 background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+	 background-size: 1000px 1000px;
+	 position: absolute;
+     opacity:0.2;
+	 right: 0;
+	 top: 0;
+	 bottom: 0;
+	 z-index: 3;
+	 -moz-animation: move-background 150s linear infinite;
+	 -ms-animation: move-background 150s linear infinite;
+	 -o-animation: move-background 150s linear infinite;
+	 -webkit-animation: move-background 150s linear infinite;
+	 animation: move-background 150s linear infinite;
+}
+ img {
+	 height: 70vh;
+	 width: 70vh;
+	 position: absolute;
+	 z-index: 3;
+	 right: 20px;
+}
+/* * { */
+            /* padding: 0; */
+            /* margin: 0; */
+            /* border: 0; */
+        /* } */
 
         body {
             content: '';
             text-align: center;
-            background-image: url("images/bgpro.jpg");
-            opacity: 1;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-color: black;
-            color: rgb(178, 176, 176);
+            /* background-image: url("images/bgpro.jpg"); */
+            /* opacity: 1; */
+            /* background-position: center; */
+            /* background-repeat: no-repeat; */
+            /* background-attachment: fixed; */
+            /* background-color: black; */
+            /* color: rgb(178, 176, 176); */
             font-family: 'Bebas Neue', cursive;
-            background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
-            /* background-size: 400% 400%; */
-            /* animation: gradient 4s ease infinite; */
+            /* background: linear-gradient(-45deg, #124300, #500276, #4cd4ca, #9d1010);
+            background-size: 400% 400%;
+            animation: gradient 4s ease infinite;
         }
 
-        /* @keyframes gradient {
+        @keyframes gradient {
             0% {
                 background-position: 0% 50%;
             }
@@ -44,10 +135,10 @@
 
             100% {
                 background-position: 0% 50%;
-            }
+            } */
 
             /* overflow: hidden; */
-        /* } */ 
+        }
 
         body,
         html {
@@ -341,12 +432,11 @@
             min-width: 360px;
             width: 100%;
             display: flex;
-            /* justify-content: center; */
+            justify-content: center;
             align-items: center;
             perspective: 1000px;
             perspective-origin: 50% 50%;
-            position:fixed;
-            /* left:50px */
+
         }
 
         @keyframes scroll {
@@ -381,19 +471,20 @@
             right: 0;
             opacity: 0;
         }
-
-        /* .ml3 { */
-            /* font-weight: 900; */
-            /* font-size: 3.5em; */
-        /* } */
+ 
     </style>
 
 </head>
 
 <body>
-    <div style="position: fixed;background-color:black;overflow:hidden;z-index:99;width:100%;padding-top:5px;overflow-x:hidden;"
+    <div class="background-container">
+        <!-- <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt=""> -->
+        <div class="stars"></div>
+        <!-- <div class="twinkling"></div> -->
+        <!-- <div class="clouds"></div> -->
+        <div style="position: fixed;background-color:black;overflow:hidden;z-index:99;width:100%;padding-top:5px"
         class="wrapper">
-        <div style="padding-left:10%;">
+        <div>
             <div style="color:white;display:inline;">
                 <h1 style="font-size:65px;right:0;">
                     Experience
@@ -404,7 +495,7 @@
             </div>
         </div>
     </div>
-    <div class="container" style="padding-top:110px">
+    <div class="container" style="padding-top:110px;z-index:99;">
         <div id="timeline">
             <div class="timeline-item">
                 <div class="timeline-icon">
@@ -416,8 +507,8 @@
                 </div>
                 <div class="timeline-content">
                     <h2 class="ml4" style="height:100px;background-color:#ee4d4d">
-                        <span class="letters letters-1">Caerus</span>
-                        <span class="letters letters-2" style="font-size:50px">Web Developer</span>
+                        <span class="letters letters-1">Caerus Infotech</span>
+                        <span class="letters letters-2">Web Developer</span>
                         <span class="letters letters-3" style="font-size:15px;text-align:right">Dec 2021 - Jan
                             2021</span>
                     </h2>
@@ -441,7 +532,7 @@
                 <div class="timeline-content right">
                     <h2 class="ml4" style="height:100px;background-color:#ee4d4d">
                         <span class="letters letters-1">Saloop.in</span>
-                        <span class="letters letters-2" style="font-size:50px">Web Developer</span>
+                        <span class="letters letters-2">Web Developer</span>
                         <span class="letters letters-3" style="font-size:15px;text-align:right">Dec 2021 - Dec
                             2022</span>
                     </h2>
@@ -462,8 +553,8 @@
                 </div>
                 <div class="timeline-content">
                     <h2 class="ml4" style="height:100px;background-color:#ee4d4d">
-                        <span class="letters letters-1">LTT</span>
-                        <span class="letters letters-2" style="font-size:50px">Tutor/Mentor</span>
+                        <span class="letters letters-1">Learn To Thrive</span>
+                        <span class="letters letters-2">Tutor/Mentor</span>
                         <span class="letters letters-3" style="font-size:15px;text-align:right">Mar 2021 - Oct
                             2021</span>
                     </h2>
@@ -487,8 +578,8 @@
                 </div>
                 <div class="timeline-content right">
                     <h2 class="ml4" style="height:100px;background-color:#ee4d4d">
-                        <span class="letters letters-1">BFX</span>
-                        <span class="letters letters-2" style="font-size:50px">Tutor/Mentor</span>
+                        <span class="letters letters-1">Being Artifex</span>
+                        <span class="letters letters-2">Tutor/Mentor</span>
                         <span class="letters letters-3" style="font-size:15px;text-align:right">Mar 2021 - Sept
                             2021</span>
                     </h2>
@@ -501,8 +592,7 @@
             </div>
         </div>
     </div>
-
-
+    </div>
 
 
     <!-- JQUERY     -->
@@ -523,214 +613,213 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
     <script>
+            var origin;
 
-        var origin;
+var frame = 0;
+var flyBoxCount = 20;
+var flyBoxes = [];
+var flyBoxPause = 200;
+var flyBoxColors = [];
 
-        var frame = 0;
-        var flyBoxCount = 20;
-        var flyBoxes = [];
-        var flyBoxPause = 200;
-        var flyBoxColors = [];
+function setup() {
+    createCanvas(windowWidth, windowHeight);
+    origin = createVector(windowWidth / 2, windowHeight / 2);
 
-        function setup() {
-            createCanvas(windowWidth, windowHeight);
-            origin = createVector(windowWidth / 2, windowHeight / 2);
+    for (i = -flyBoxCount / 2; i < flyBoxCount / 2; i++) {
+        var box = createFlyBox(i);
+        box.start();
+        flyBoxes.push(box);
+    }
 
-            for (i = -flyBoxCount / 2; i < flyBoxCount / 2; i++) {
-                var box = createFlyBox(i);
-                box.start();
-                flyBoxes.push(box);
+    var getRandColor = () => {
+        return color(random(100, 200), random(100, 200), random(100, 200));
+    }
+
+    flyBoxColors.push(color('#f2623a'));
+    flyBoxColors.push(color('#3af262'));
+    flyBoxColors.push(color('#623af2'));
+    flyBoxColors.push(color('#f23a58'));
+    flyBoxColors.push(color('#caf23a'));
+}
+
+function draw() {
+    rectMode(CENTER);
+    for (i = 0; i < flyBoxCount; i++) {
+        var flyBox = flyBoxes[i];
+        flyBox.draw();
+    }
+
+    // WIP
+    stroke(0, 0, 0);
+    strokeWeight(40);
+    noFill();
+    translate(origin.x, origin.y);
+    rotate((sin(frame * 0.02) + cos(frame * 0.03)) * PI);
+    //rect(0, 0, 300, 300);
+
+    frame += 1;
+}
+
+function createFlyBox(offset) {
+    return {
+        offset: offset,
+        delay: 0,
+        getRandomDelay: () => { return random(0, flyBoxCount) * 15; },
+        steps: 0,
+        directions: [createVector(-1, -1), createVector(-1, 1), createVector(1, -1), createVector(1, 1)],
+        currentDirection: 0,
+        iteration: 0,
+        size: 80,
+        start: function () {
+            this.delay = this.getRandomDelay();
+            this.steps = -this.delay;
+        },
+        draw: function () {
+            this.steps += 20;
+
+            if (this.steps < 0) {
+                return;
             }
 
-            var getRandColor = () => {
-                return color(random(100, 200), random(100, 200), random(100, 200));
-            }
+            fill(flyBoxColors[this.iteration]);
+            noStroke();
+            var dir = this.directions[this.currentDirection];
+            rect(
+                -dir.x * this.steps + origin.x + dir.x * origin.x - dir.x * this.offset * (this.size * 0.75),
+                -dir.y * this.steps + origin.y + dir.y * origin.y + dir.y * this.offset * (this.size * 0.75),
+                this.size, this.size);
 
-            flyBoxColors.push(color('#f2623a'));
-            flyBoxColors.push(color('#3af262'));
-            flyBoxColors.push(color('#623af2'));
-            flyBoxColors.push(color('#f23a58'));
-            flyBoxColors.push(color('#caf23a'));
-        }
-
-        function draw() {
-            rectMode(CENTER);
-            for (i = 0; i < flyBoxCount; i++) {
-                var flyBox = flyBoxes[i];
-                flyBox.draw();
-            }
-
-            // WIP
-            stroke(0, 0, 0);
-            strokeWeight(40);
-            noFill();
-            translate(origin.x, origin.y);
-            rotate((sin(frame * 0.02) + cos(frame * 0.03)) * PI);
-            //rect(0, 0, 300, 300);
-
-            frame += 1;
-        }
-
-        function createFlyBox(offset) {
-            return {
-                offset: offset,
-                delay: 0,
-                getRandomDelay: () => { return random(0, flyBoxCount) * 15; },
-                steps: 0,
-                directions: [createVector(-1, -1), createVector(-1, 1), createVector(1, -1), createVector(1, 1)],
-                currentDirection: 0,
-                iteration: 0,
-                size: 80,
-                start: function () {
-                    this.delay = this.getRandomDelay();
-                    this.steps = -this.delay;
-                },
-                draw: function () {
-                    this.steps += 20;
-
-                    if (this.steps < 0) {
-                        return;
-                    }
-
-                    fill(flyBoxColors[this.iteration]);
-                    noStroke();
-                    var dir = this.directions[this.currentDirection];
-                    rect(
-                        -dir.x * this.steps + origin.x + dir.x * origin.x - dir.x * this.offset * (this.size * 0.75),
-                        -dir.y * this.steps + origin.y + dir.y * origin.y + dir.y * this.offset * (this.size * 0.75),
-                        this.size, this.size);
-
-                    if (this.steps > max(windowWidth, windowHeight)) {
-                        var newDelay = this.getRandomDelay();
-                        this.steps = -flyBoxPause + this.delay - newDelay;
-                        this.delay = newDelay;
-                        this.currentDirection = (this.currentDirection + 1) % 4;
-                        this.iteration = (this.iteration + 1) % flyBoxColors.length;
-                    }
-                }
+            if (this.steps > max(windowWidth, windowHeight)) {
+                var newDelay = this.getRandomDelay();
+                this.steps = -flyBoxPause + this.delay - newDelay;
+                this.delay = newDelay;
+                this.currentDirection = (this.currentDirection + 1) % 4;
+                this.iteration = (this.iteration + 1) % flyBoxColors.length;
             }
         }
+    }
+}
 
-        var ml4 = {};
-        ml4.opacityIn = [0, 1];
-        ml4.scaleIn = [0.2, 1];
-        ml4.scaleOut = 3;
-        ml4.durationIn = 800;
-        ml4.durationOut = 600;
-        ml4.delay = 1500;
+var ml4 = {};
+ml4.opacityIn = [0, 1];
+ml4.scaleIn = [0.2, 1];
+ml4.scaleOut = 3;
+ml4.durationIn = 800;
+ml4.durationOut = 600;
+ml4.delay = 1500;
 
-        anime.timeline({ loop: true })
-            .add({
-                targets: '.ml4 .letters-1',
-                opacity: ml4.opacityIn,
-                scale: ml4.scaleIn,
-                duration: ml4.durationIn
-            }).add({
-                targets: '.ml4 .letters-1',
-                opacity: 0,
-                scale: ml4.scaleOut,
-                duration: ml4.durationOut,
-                easing: "easeInExpo",
-                delay: ml4.delay
-            }).add({
-                targets: '.ml4 .letters-2',
-                opacity: ml4.opacityIn,
-                scale: ml4.scaleIn,
-                duration: ml4.durationIn
-            }).add({
-                targets: '.ml4 .letters-2',
-                opacity: 0,
-                scale: ml4.scaleOut,
-                duration: ml4.durationOut,
-                easing: "easeInExpo",
-                delay: ml4.delay
-            }).add({
-                targets: '.ml4 .letters-3',
-                opacity: ml4.opacityIn,
-                scale: ml4.scaleIn,
-                duration: ml4.durationIn
-            }).add({
-                targets: '.ml4 .letters-3',
-                opacity: 0,
-                scale: ml4.scaleOut,
-                duration: ml4.durationOut,
-                easing: "easeInExpo",
-                delay: ml4.delay
-            }).add({
-                targets: '.ml4',
-                opacity: 0,
-                duration: 50,
-                // delay: 500
-            });
+anime.timeline({ loop: true })
+    .add({
+        targets: '.ml4 .letters-1',
+        opacity: ml4.opacityIn,
+        scale: ml4.scaleIn,
+        duration: ml4.durationIn
+    }).add({
+        targets: '.ml4 .letters-1',
+        opacity: 0,
+        scale: ml4.scaleOut,
+        duration: ml4.durationOut,
+        easing: "easeInExpo",
+        delay: ml4.delay
+    }).add({
+        targets: '.ml4 .letters-2',
+        opacity: ml4.opacityIn,
+        scale: ml4.scaleIn,
+        duration: ml4.durationIn
+    }).add({
+        targets: '.ml4 .letters-2',
+        opacity: 0,
+        scale: ml4.scaleOut,
+        duration: ml4.durationOut,
+        easing: "easeInExpo",
+        delay: ml4.delay
+    }).add({
+        targets: '.ml4 .letters-3',
+        opacity: ml4.opacityIn,
+        scale: ml4.scaleIn,
+        duration: ml4.durationIn
+    }).add({
+        targets: '.ml4 .letters-3',
+        opacity: 0,
+        scale: ml4.scaleOut,
+        duration: ml4.durationOut,
+        easing: "easeInExpo",
+        delay: ml4.delay
+    }).add({
+        targets: '.ml4',
+        opacity: 0,
+        duration: 50,
+        // delay: 500
+    });
 
-        var textWrapper = document.querySelector('.ml31');
-        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+var textWrapper = document.querySelector('.ml31');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-        anime.timeline({ loop: true })
-            .add({
-                targets: '.ml31 .letter',
-                opacity: [0, 1],
-                easing: "easeInOutQuad",
-                duration: 225,
-                delay: (el, i) => 35 * (i + 1)
-            }).add({
-                targets: '.ml31',
-                opacity: 0,
-                duration: 1000,
-                easing: "easeOutExpo",
-                delay: 1000
-            });
-        var textWrapper = document.querySelector('.ml32');
-        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+anime.timeline({ loop: true })
+    .add({
+        targets: '.ml31 .letter',
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 225,
+        delay: (el, i) => 35 * (i + 1)
+    }).add({
+        targets: '.ml31',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+    });
+var textWrapper = document.querySelector('.ml32');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-        anime.timeline({ loop: true })
-            .add({
-                targets: '.ml32 .letter',
-                opacity: [0, 1],
-                easing: "easeInOutQuad",
-                duration: 225,
-                delay: (el, i) => 35 * (i + 1)
-            }).add({
-                targets: '.ml32',
-                opacity: 0,
-                duration: 1000,
-                easing: "easeOutExpo",
-                delay: 1000
-            });
-        var textWrapper = document.querySelector('.ml33');
-        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+anime.timeline({ loop: true })
+    .add({
+        targets: '.ml32 .letter',
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 225,
+        delay: (el, i) => 35 * (i + 1)
+    }).add({
+        targets: '.ml32',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+    });
+var textWrapper = document.querySelector('.ml33');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-        anime.timeline({ loop: true })
-            .add({
-                targets: '.ml33 .letter',
-                opacity: [0, 1],
-                easing: "easeInOutQuad",
-                duration: 225,
-                delay: (el, i) => 35 * (i + 1)
-            }).add({
-                targets: '.ml33',
-                opacity: 0,
-                duration: 1000,
-                easing: "easeOutExpo",
-                delay: 1000
-            });
-        var textWrapper = document.querySelector('.ml34');
-        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+anime.timeline({ loop: true })
+    .add({
+        targets: '.ml33 .letter',
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 225,
+        delay: (el, i) => 35 * (i + 1)
+    }).add({
+        targets: '.ml33',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+    });
+var textWrapper = document.querySelector('.ml34');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-        anime.timeline({ loop: true })
-            .add({
-                targets: '.ml34 .letter',
-                opacity: [0, 1],
-                easing: "easeInOutQuad",
-                duration: 225,
-                delay: (el, i) => 35 * (i + 1)
-            }).add({
-                targets: '.ml34',
-                opacity: 0,
-                duration: 1000,
-                easing: "easeOutExpo",
-                delay: 1000
-            });
+anime.timeline({ loop: true })
+    .add({
+        targets: '.ml34 .letter',
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 225,
+        delay: (el, i) => 35 * (i + 1)
+    }).add({
+        targets: '.ml34',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+    });
     </script>
 
 </body>
