@@ -1,307 +1,1792 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing : border-box;
-            outline: none;
-        }
-        body{
-            background:#000;
-            font-family: 'Bebas Neue', cursive;
-        }
-        header{
-            padding :40px 50px;
-        }
-        header .logo{
-            float:left;
-        }
-        header .menu{
-            float:right;
-        }
-        header .menu ul li{
-            display:inline-block;
-            margin:0 20px;
-        }
-        header .menu ul li:last-child{
-            margin-right:0;
-        }
-        header .menu ul li a{
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition :all ease 0.7s;
-        }
-        header .menu ul li a:hover{
-            color: #4cd4ca;
-        }
-        header .menu ul li.btn a{
-            background-color: #4cd4ca;
-            color: #000;
-            padding: 14px 27px;
-            border-top-left-radius:15px;
-            border-bottom-right-radius:15px;
-        }
-        header .menu ul li.btn a:hover{
-            border-radius:15px;
-            border-top-left-radius:0;
-            border-bottom-right-radius:0;
-        }
-        .home .container{
-            max-width:1266px;
-            margin:0 auto;
-        }
-        .home .person{
-            float:right;
-            margin: 70px 180px 0;
-            position: relative;
-            border-radius: 70px 0 70px 0;
-            overflow: hidden;
-        }
-        .home .person img{
-            filter: brightness(1.5);
-        }
-        .home .person-overlay{
-            content:'';
-            position:absolute;
-            top:0;
-            left:-100%;
-            width:100%;
-            height:100%;
-            background:#525252;
-            z-index:99;
-        }
-        .home-text{
-            color:#fff;
-            margin-top:220px;
-            position:absolute;
-        }
-        .home-text h6{
-            text-transform:uppercase;
-            letter-spacing: 20px;
-            font-size: 26px;
-        }
-        .home-text h1{
-            text-transform:uppercase;
-            font-size:150px;
-        }
-        .home-text p{
-            max-width:500px;
-            font-size:16px;
-            margin-top:230px;
-        }
-        .home-text .name span{
-            margin-right:130px;
-            display:inline-block;
-        }
-        .home-text .name span:last-child{
-            margin-right:0;
-        }
-        .home .person img{
-            opacity:0;
-        }
-        .student span{
-            opacity:0;
-        }
-        .name span{
-            opacity:0;
-        }
-        .menu li{
-            opacity:0;
-        }
-        .small-intro span{
-            opacity:0;
-        }
-        .wrapper2{
-            display: inline-flex;
-        }
-        .wrapper2 .static-txt{
-            color: #fff;
-            font-size: 60px;
-            font-weight: 400;
-        }
-        .wrapper2 .dynamic-txts{
-            margin-left: 15px;
-            margin-top:-6px;
-            height: 90px;
-            line-height: 90px;
-            overflow: hidden;
-        }
-        .dynamic-txts li{
-            list-style: none;
-            color: #4cd4ca;
-            font-size: 60px;
-            font-weight: 500;
-            position: relative;
-            top: 0;
-            animation: slide 51s steps(17) infinite;
-        }
-        @keyframes slide {
-            100%{
-                top: -1530px;
-            }
-        }
-        .dynamic-txts li span{
-            position: relative;
-            margin: 5px 0;
-            line-height: 90px;
-        }
-        .dynamic-txts li span::after{
-            content: "";
-            position: absolute;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background: #000;
-            border-left: 2px solid #4c4c4c;
-            animation: typing 3s steps(10) infinite;
-        }
-        @keyframes typing {
-            40%, 60%{
-                left: calc(100% + 30px);
-            }
-            100%{
-                left: 0;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/slick.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    body {
+      /* background-image: url('images/person.jpeg'); */
+      /* background-repeat: no-repeat; */
+      /* background-size: cover; */
+      /* backgrou */
+      /* background-position-y: 30%; */
+      font-family: 'Bebas Neue', cursive;
+      background-color: black;
+    }
+
+    header {
+      padding: 40px 50px;
+    }
+
+    header .logo {
+      float: left;
+    }
+
+    header .menu {
+      float: right;
+    }
+
+    header .menu ul li {
+      display: inline-block;
+      margin: 0 20px;
+    }
+
+    header .menu ul li:last-child {
+      margin-right: 0;
+    }
+
+    header .menu ul li a {
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all ease 0.7s;
+    }
+
+    header .menu ul li a:hover {
+      color: #4cd4ca;
+    }
+
+    header .menu ul li.btn a {
+      background-color: #4cd4ca;
+      color: #000;
+      padding: 14px 27px;
+      border-top-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+
+    header .menu ul li.btn a:hover {
+      border-radius: 15px;
+      border-top-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .home .container {
+      max-width: 1266px;
+      margin: 0 auto;
+    }
+
+    .home .person {
+      float: right;
+      margin: 70px 180px 0;
+      position: relative;
+      border-radius: 70px 0 70px 0;
+      overflow: hidden;
+    }
+
+    .home .person img {
+      filter: brightness(1.5);
+    }
+
+    .home .person-overlay {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: #525252;
+      z-index: 99;
+    }
+
+    .home-text {
+      color: #fff;
+      margin-top: 220px;
+      position: absolute;
+    }
+
+    .home-text h6 {
+      text-transform: uppercase;
+      letter-spacing: 20px;
+      font-size: 26px;
+    }
+
+    .home-text h1 {
+      text-transform: uppercase;
+      font-size: 150px;
+    }
+
+    .home-text p {
+      max-width: 500px;
+      font-size: 16px;
+      margin-top: 230px;
+    }
+
+    .home-text .name span {
+      margin-right: 130px;
+      display: inline-block;
+    }
+
+    .home-text .name span:last-child {
+      margin-right: 0;
+    }
+
+    .home .person img {
+      opacity: 0;
+    }
+
+    .student span {
+      opacity: 0;
+    }
+
+    .name span {
+      opacity: 0;
+    }
+
+    .menu li {
+      opacity: 0;
+    }
+
+    .small-intro span {
+      opacity: 0;
+    }
+
+    .wrapper2 {
+      display: inline-flex;
+    }
+
+    .wrapper2 .static-txt {
+      color: #fff;
+      font-size: 60px;
+      font-weight: 100;
+    }
+
+    .wrapper2 .dynamic-txts {
+      margin-left: 25px;
+      margin-top: -100px;
+      height: 90px;
+      line-height: 90px;
+      overflow: hidden;
+    }
+
+    .dynamic-txts li {
+      list-style: none;
+      color: white;
+      font-size: 60px;
+      font-weight: 500;
+      position: relative;
+      top: 0;
+      animation: slide 51s steps(17) infinite;
+    }
+
+    @keyframes slide {
+      100% {
+        top: -1530px;
+      }
+    }
+
+    .dynamic-txts li span {
+      position: relative;
+      margin: 5px 0;
+      line-height: 90px;
+    }
+
+    .dynamic-txts li span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      /* background:; */
+      /* border-left: 2px solid #4c4c4c; */
+      animation: typing 3s steps(10) infinite;
+    }
+
+    @keyframes typing {
+
+      40%,
+      60% {
+        left: calc(100% + 30px);
+      }
+
+      100% {
+        left: 0;
+      }
+    }
+
+    /*
+ * Author by FreeHTML5.co
+ * Twitter: https://twitter.com/fh5co
+ * Facebook: https://fb.com/fh5co
+ * URL: https://freehtml5.co
+ */
+    /* Fonts */
+    @font-face {
+      font-family: 'Calisto-MT';
+      src: url(../fonts/Calisto-MT.ttf);
+    }
+
+    @font-face {
+      font-family: 'Calisto-MT-Italic';
+      src: url(../fonts/Calisto-MT-Italic.ttf);
+    }
+
+    @font-face {
+      font-family: 'Calisto-MT-Bold';
+      src: url(../fonts/Calisto-MT-Bold.ttf);
+    }
+
+    /* Colors */
+    /* Universal style */
+    * {
+      margin: 0;
+      padding: 0;
+      /* font-family: "Calisto-MT"; */
+    }
+
+    .site-container {
+      width: 1115px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1250px) {
+      .site-container {
+        width: 90%;
+      }
+    }
+
+    .universal-h2 {
+      font-size: 48px;
+      text-align: center;
+      color: #222;
+    }
+
+    @media (max-width: 1250px) {
+      .universal-h2 {
+        font-size: 38px;
+      }
+    }
+
+    @media (max-width: 668px) {
+      .universal-h2 {
+        font-size: 30px;
+      }
+    }
+
+    .universal-h2-bckg {
+      background-image: url("../images/double-line.svg");
+      background-repeat: no-repeat;
+      background-position: center bottom;
+    }
+
+    /* Universal style end */
+    /* Includes */
+    .site-navigation {
+      position: absolute;
+      top: 4.6%;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .site-navigation-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .main-navigation {
+      color: #fff;
+      display: none;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0px;
+      left: 0px;
+      background: #000;
+      opacity: 0.9;
+    }
+
+    .main-navigation .main-navigation__ul {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 3%;
+      border: 2px solid #fff;
+      border-radius: 7px;
+      background-color: #c18f59;
+    }
+
+    .main-navigation .main-navigation__ul li {
+      margin-bottom: 20px;
+      list-style: none;
+    }
+
+    .main-navigation .main-navigation__ul a {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.3s ease;
+    }
+
+    .main-navigation .main-navigation__ul a:hover {
+      color: #777;
+    }
+
+    @media (max-width: 1150px) {
+      .main-navigation {
+        opacity: 0.94;
+      }
+    }
+
+    /* Navigation burger */
+    .burger-container {
+      cursor: pointer;
+      z-index: 3;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+      width: 30px;
+      height: 3px;
+      background-color: #c18f59;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+
+    .change .bar1 {
+      transform: rotate(-45deg) translate(-6px, 6px);
+      background-color: #c18f59;
+    }
+
+    .change .bar2 {
+      opacity: 0;
+      background-color: #c18f59;
+    }
+
+    .change .bar3 {
+      transform: rotate(45deg) translate(-6px, -7px);
+      background-color: #c18f59;
+    }
+
+    .stop-scroll {
+      overflow: hidden;
+    }
+
+    /* Navigation burger end */
+    .fh5co-top-banner {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      /* background-image: url("../images/top-banner-bckg.jpg"); */
+      background-position: center;
+      background-size: cover;
+    }
+
+    .fh5co-top-banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* background-color: #000; */
+      opacity: 0.9;
+    }
+
+    .fh5co-top-banner .site-container {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 1600px) {
+      .fh5co-top-banner {
+        padding-top: 180px;
+      }
+    }
+
+    @media (max-width: 1250px) {
+      .fh5co-top-banner {
+        padding-top: 130px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .fh5co-top-banner {
+        padding-top: 105px;
+      }
+    }
+
+    @media (min-width: 1600px) {
+      .fh5co-top-banner {
+        min-height: 100vh;
+      }
+    }
+
+    .top-banner__inner {
+      display: flex;
+      align-items: center;
+    }
+
+    .top-banner__inner .top-banner__text {
+      margin-left: 54px;
+    }
+
+    @media (max-width: 1250px) {
+      .top-banner__inner .top-banner__text {
+        width: 35%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-banner__inner .top-banner__text {
+        width: 50%;
+        margin-left: 20px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .top-banner__inner .top-banner__text {
+        width: 65%;
+        margin-bottom: 20px;
+        margin-left: 0;
+      }
+    }
+
+    .top-banner__inner .top-banner__text p {
+      margin-bottom: 42px;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .top-banner__inner .top-banner__text p {
+        margin-bottom: 25px;
+        font-size: 14px;
+      }
+    }
+
+    .top-banner__inner .top-banner__h2 {
+      font-size: 74px;
+      letter-spacing: 3px;
+      color: #fff;
+      /* font-family: "Calisto-MT-Bold";  */
+    }
+
+    @media (max-width: 1250px) {
+      .top-banner__inner .top-banner__h2 {
+        font-size: 50px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-banner__inner .top-banner__h2 {
+        font-size: 35px;
+      }
+    }
+
+    .top-banner__inner .top-banner__text-up .top-banner__h2 {
+      margin-top: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .top-banner__inner .top-banner__text-up .top-banner__h2 {
+        margin-top: 0;
+      }
+    }
+
+    .top-banner__inner .top-banner__text-down {
+      margin-bottom: 20px;
+      padding-left: 27%;
+    }
+
+    .top-banner__inner .top-banner__text-down .top-banner__h2 {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .top-banner__inner .top-banner__text-down .top-banner__h2 {
+        margin-bottom: 0;
+      }
+    }
+
+    .top-banner__inner .top-banner__image {
+      font-size: 0;
+    }
+
+    @media (max-width: 806px) {
+      .top-banner__inner .top-banner__image {
+        width: 80%;
+      }
+
+      .top-banner__inner .top-banner__image img {
+        width: 200%;
+      }
+    }
+
+    /* @media (max-width: 520px) { */
+    /* .top-banner__inner .top-banner__image { */
+    /* width: 65%; */
+    /* margin-bottom: 20px; } } */
+    @media (max-width: 520px) {
+      .top-banner__inner {
+        flex-direction: column;
+      }
+    }
+
+    .brand-span {
+      font-size: 14px;
+      color: #4cd4ca;
+    }
+
+    .brand-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 11px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #4cd4ca;
+      border: 1px solid #fff;
+      transition: 0.3s ease;
+    }
+
+    .brand-button:hover,
+    .brand-button:focus {
+      color: #777;
+    }
+
+    .fh5co-about-me {
+      position: relative;
+      margin: 193px 0 199px;
+    }
+
+    @media (max-width: 1250px) {
+      .fh5co-about-me {
+        margin: 150px 0;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .fh5co-about-me {
+        margin: 125px 0;
+      }
+    }
+
+    .about-me-bckg {
+      position: absolute;
+      background-image: url("../images/about-me-bckg.jpg");
+      background-position: center;
+      background-size: cover;
+      height: 500px;
+      top: -75px;
+      right: 0;
+      height: calc(100% + 150px);
+      width: 70%;
+      z-index: -1;
+    }
+
+    .about-me-bckg:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 992px) {
+      .about-me-bckg {
+        width: 100%;
+        padding-bottom: 15px;
+      }
+    }
+
+    .about-me-inner {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 992px) {
+      .about-me-inner {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .about-me-slider {
+      position: relative;
+    }
+
+    .about-me-slider .slick-arrow {
+      position: absolute;
+      bottom: -18%;
+    }
+
+    .about-me-slider .slick-prev {
+      left: 40%;
+    }
+
+    @media (max-width: 520px) {
+      .about-me-slider .slick-prev {
+        left: 34%;
+      }
+    }
+
+    .about-me-slider .slick-next {
+      right: 40%;
+    }
+
+    @media (max-width: 520px) {
+      .about-me-slider .slick-next {
+        right: 34%;
+      }
+    }
+
+    .span-arrow {
+      padding: 10px 15px;
+      cursor: pointer;
+      color: #4cd4ca;
+      border: 1px solid #c18f59;
+      border-radius: 50%;
+      transition: 0.3s ease;
+    }
+
+    .span-arrow:hover {
+      color: #fff;
+      border-color: #fff;
+    }
+
+    .portfolio-wrapper {
+      width: 390px;
+      padding: 8px;
+      text-align: center;
+      background-color: #4cd4ca;
+    }
+
+    .portfolio-wrapper .portfolio__img {
+      font-size: 0;
+    }
+
+    .portfolio-wrapper .portfolio__img img {
+      width: 100%;
+    }
+
+    .portfolio-wrapper .portfolio__bottom {
+      padding: 35px 0 95px;
+      background-color: #4cd4ca;
+    }
+
+    @media (max-width: 992px) {
+      .portfolio-wrapper .portfolio__bottom {
+        padding: 25px 0;
+      }
+    }
+
+    .portfolio-wrapper .portfolio__name {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-bottom: 23px;
+    }
+
+    @media (max-width: 992px) {
+      .portfolio-wrapper .portfolio__name {
+        margin-bottom: 10px;
+      }
+    }
+
+    .portfolio-wrapper .portfolio__name span {
+      font-size: 90px;
+      line-height: 75px;
+      color: #4cd4ca;
+      /* font-family: "Calisto-MT-Bold";  */
+    }
+
+    @media (max-width: 992px) {
+      .portfolio-wrapper .portfolio__name span {
+        font-size: 65px;
+        line-height: 62px;
+      }
+    }
+
+    .portfolio-wrapper p {
+      padding: 0 10%;
+      line-height: 25px;
+      font-style: italic;
+      color: #777;
+    }
+
+    @media (max-width: 620px) {
+      .portfolio-wrapper p {
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .portfolio-wrapper {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .portfolio-wrapper {
+        width: 250px;
+      }
+    }
+
+    .about-me__text {
+      width: 44%;
+      margin-right: 80px;
+      text-align: center;
+    }
+
+    .about-me__text .universal-h2 {
+      color: #fff;
+      padding-bottom: 20px;
+      margin-bottom: 25px;
+    }
+
+    .about-me__text p {
+      margin-bottom: 35px;
+      line-height: 24px;
+      color: #4cd4ca;
+    }
+
+    .about-me__text p span {
+      font-size: 48px;
+      color: #fff;
+    }
+
+    @media (max-width: 620px) {
+      .about-me__text p {
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+
+    .about-me__text h4 {
+      margin-bottom: 7px;
+      font-size: 25px;
+      color: #4cd4ca;
+    }
+
+    .about-me__text .p-white {
+      margin-bottom: 0;
+      color: #fff;
+    }
+
+    @media (max-width: 1250px) {
+      .about-me__text {
+        width: 48%;
+        margin-right: 40px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .about-me__text {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+
+    .slick-slide:focus {
+      outline: none;
+    }
+
+    .fh5co-books {
+      margin-bottom: 122px;
+    }
+
+    .fh5co-books .universal-h2 {
+      margin-bottom: 50px;
+      padding-bottom: 20px;
+    }
+
+    .fh5co-books .books-brand-button {
+      text-align: center;
+    }
+
+    .fh5co-books .books-brand-button .brand-button {
+      font-size: 16px;
+      text-transform: none;
+      border-color: #c18f59;
+    }
+
+    .fh5co-books .books-brand-button .brand-button:hover {
+      border-color: #777;
+    }
+
+    @media (max-width: 1250px) {
+      .fh5co-books {
+        margin-bottom: 60px;
+      }
+    }
+
+    .books {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 70px;
+    }
+
+    @media (max-width: 559px) {
+      .books {
+        justify-content: space-around;
+      }
+    }
+
+    .single-book {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .single-book .single-book__img {
+      position: relative;
+      display: block;
+      font-size: 0;
+    }
+
+    .single-book .single-book__img .single-book_download {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      transition: 0.3s ease;
+    }
+
+    .single-book .single-book__img .single-book_download img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .single-book .single-book__img:hover .single-book_download {
+      visibility: visible;
+      opacity: 0.7;
+    }
+
+    .single-book .single-book__title {
+      margin: 19px 0 18px;
+      font-size: 18px;
+    }
+
+    .single-book .single-book__price {
+      font-size: 18px;
+      font-weight: 600;
+      font-style: italic;
+      color: #4cd4ca;
+    }
+
+    @media (max-width: 1250px) {
+      .single-book {
+        margin-right: 10px;
+      }
+
+      .single-book:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .rating {
+      margin-top: 8px;
+      unicode-bidi: bidi-override;
+      direction: rtl;
+    }
+
+    .rating span {
+      font-size: 23px;
+      color: #ffd200;
+      cursor: pointer;
+    }
+
+    .rating>span:hover:before,
+    .rating>span:hover~span:before {
+      content: "\2605";
+      position: absolute;
+    }
+
+    .fh5co-counter {
+      position: relative;
+      margin-bottom: 122px;
+      padding: 100px 0;
+      background-image: url("../images/book-bckg.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .fh5co-counter::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #c18f59;
+      opacity: 0.9;
+    }
+
+    .fh5co-counter .site-container {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 850px) {
+      .fh5co-counter {
+        padding: 50px 0 20px;
+        margin-bottom: 50px;
+      }
+    }
+
+    .counter-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .single-count {
+      width: 23%;
+      text-align: center;
+      color: #fff;
+    }
+
+    .single-count span {
+      display: block;
+      margin-bottom: 25px;
+      font-size: 40px;
+      font-weight: 900;
+    }
+
+    .single-count p {
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 850px) {
+      .single-count {
+        width: 48%;
+        margin-bottom: 30px;
+      }
+
+      .single-count .count {
+        font-size: 35px;
+        margin-bottom: 15px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .single-count {
+        width: 100%;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #fff;
+      }
+    }
+
+    .single-count__text {
+      display: flex;
+      justify-content: center;
+    }
+
+    .single-count__text img {
+      margin-right: 20px;
+    }
+
+    .fh5co-blog {
+      margin-bottom: 175px;
+    }
+
+    .fh5co-blog .universal-h2 {
+      margin-bottom: 55px;
+      padding-bottom: 20px;
+    }
+
+    @media (max-width: 620px) {
+      .fh5co-blog {
+        margin-bottom: 105px;
+      }
+    }
+
+    .blog-inner {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .blog-slider .slick-slide {
+      margin: 0 15px;
+    }
+
+    .blog-slider .slick-list {
+      margin: 0 -15px;
+    }
+
+    .single-blog {
+      display: flex !important;
+    }
+
+    .single-blog .single-blog__img {
+      width: 50%;
+      font-size: 0;
+    }
+
+    .single-blog .single-blog__text {
+      width: 50%;
+      padding: 7%;
+      border: 3px solid #f5f5f5;
+      border-left: 0;
+    }
+
+    .single-blog .single-blog__text h4 {
+      margin-bottom: 5px;
+      font-size: 24px;
+      line-height: 33px;
+    }
+
+    .single-blog .single-blog__text span {
+      display: block;
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: #4cd4ca;
+      font-family: "Calisto-MT-Bold";
+    }
+
+    .single-blog .single-blog__text p {
+      color: #777;
+      line-height: 21px;
+    }
+
+    @media (max-width: 992px) {
+      .single-blog .single-blog__text {
+        padding: 5%;
+      }
+
+      .single-blog .single-blog__text h4 {
+        margin-bottom: 3px;
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      .single-blog .single-blog__text p {
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .single-blog .single-blog__text {
+        padding: 3%;
+      }
+
+      .single-blog .single-blog__text h4 {
+        font-size: 16px;
+      }
+
+      .single-blog .single-blog__text span {
+        margin-bottom: 7px;
+        font-size: 12px;
+      }
+
+      .single-blog .single-blog__text p {
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
+
+    .single-blog:nth-child(even) h4 {
+      color: #4cd4ca;
+    }
+
+    @media (max-width: 1250px) {
+      .single-blog .single-blog__img img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .blog-slider {
+      position: relative;
+    }
+
+    .blog-slider .slick-arrow {
+      position: absolute;
+      bottom: -22%;
+    }
+
+    .blog-slider .slick-prev {
+      left: 45.5%;
+    }
+
+    @media (max-width: 1250px) {
+      .blog-slider .slick-prev {
+        left: 40%;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .blog-slider .slick-prev {
+        left: 35%;
+      }
+    }
+
+    .blog-slider .slick-next {
+      right: 45.5%;
+    }
+
+    @media (max-width: 1250px) {
+      .blog-slider .slick-next {
+        right: 40%;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .blog-slider .slick-next {
+        right: 35%;
+      }
+    }
+
+    .blog-slider .span-arrow:hover {
+      color: #4cd4ca;
+      border-color: #777;
+    }
+
+    .fh5co-quotes {
+      position: relative;
+      padding: 135px 0 172px;
+      text-align: center;
+      background-image: url("../images/quotes-bckg.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .fh5co-quotes::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      opacity: 0.9;
+    }
+
+    .fh5co-quotes .site-container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .fh5co-quotes .universal-h2 {
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+      color: #fff !important;
+    }
+
+    .fh5co-quotes p {
+      width: 43%;
+      margin: 0 auto 45px;
+      color: #fff;
+      line-height: 24px;
+    }
+
+    @media (max-width: 620px) {
+      .fh5co-quotes p {
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+
+    .fh5co-quotes img {
+      margin: 0 auto 5px;
+    }
+
+    .fh5co-quotes h4 {
+      margin-bottom: 5px;
+      font-size: 25px;
+      color: #4cd4ca;
+    }
+
+    .fh5co-quotes .slick-arrow {
+      bottom: -8%;
+    }
+
+    .fh5co-quotes .slick-prev {
+      left: 45.5%;
+    }
+
+    @media (max-width: 1150px) {
+      .fh5co-quotes .slick-prev {
+        left: 34%;
+      }
+    }
+
+    .fh5co-quotes .slick-next {
+      right: 45.5%;
+    }
+
+    @media (max-width: 1150px) {
+      .fh5co-quotes .slick-next {
+        right: 34%;
+      }
+    }
+
+    @media (max-width: 1150px) {
+      .fh5co-quotes {
+        padding: 75px 0 95px;
+      }
+
+      .fh5co-quotes p {
+        width: 90%;
+      }
+    }
+
+    .fh5co-social {
+      position: relative;
+      padding: 63px 0;
+      background-image: url("../images/social-bckg.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .fh5co-social::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #c18f59;
+      opacity: 0.9;
+    }
+
+    .fh5co-social .site-container {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 620px) {
+      .fh5co-social {
+        padding: 40px 0;
+      }
+    }
+
+    .social {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .social h5 {
+      font-size: 24px;
+      color: #fff;
+    }
+
+    @media (max-width: 620px) {
+      .social {
+        flex-direction: column;
+      }
+    }
+
+    .social-icons a {
+      position: relative;
+      border: 1px solid white;
+      border-radius: 50%;
+      padding: 13px 23px;
+      margin-right: 10px;
+      transition: 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background-color: #777;
+      border-color: transparent;
+    }
+
+    .social-icons img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: 620px) {
+      .social-icons {
+        margin: 35px 0;
+      }
+    }
+
+    .site-footer {
+      padding-top: 120px;
+      background-color: #343434;
+    }
+
+    @media (max-width: 1250px) {
+      .site-footer {
+        padding-top: 60px;
+      }
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 95px;
+    }
+
+    .footer-inner h5 {
+      margin-bottom: 30px;
+      font-size: 20px;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    @media (max-width: 1250px) {
+      .footer-inner {
+        padding-bottom: 50px;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .footer-info {
+      width: 50%;
+      display: flex;
+    }
+
+    .footer-info .footer-info__left {
+      margin-right: 45px;
+    }
+
+    .footer-info .footer-info__left img {
+      margin-bottom: 10px;
+    }
+
+    .footer-info .footer-info__left p {
+      color: #4cd4ca;
+    }
+
+    @media (max-width: 620px) {
+      .footer-info .footer-info__left {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    .footer-info .footer-info__right p {
+      margin-bottom: 15px;
+      color: #4cd4ca;
+    }
+
+    .footer-info .footer-info__right .footer-phone {
+      font-size: 14px;
+    }
+
+    .footer-info .footer-info__right .social-icons {
+      margin-top: 27px;
+    }
+
+    .footer-info .footer-info__right .social-icons a {
+      padding: 9px 19px;
+    }
+
+    @media (max-width: 1250px) {
+      .footer-info {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .footer-info {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .footer-contact-form {
+      width: 50%;
+    }
+
+    .footer-contact-form .contact-form__input {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .footer-contact-form .contact-form__input input {
+      width: 40%;
+      padding: 20px;
+      border: 1px solid #404040;
+      background-color: #282828;
+      color: #4cd4ca;
+    }
+
+    .footer-contact-form .contact-form__input input::placeholder {
+      color: #aaa;
+    }
+
+    @media (max-width: 1250px) {
+      .footer-contact-form .contact-form__input input {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .footer-contact-form .contact-form__input input {
+        width: 100%;
+      }
+    }
+
+    .footer-contact-form textarea {
+      box-sizing: border-box;
+      height: 90px;
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid #404040;
+      background-color: #282828;
+      resize: none;
+      color: #4cd4ca;
+    }
+
+    .footer-contact-form .submit-button {
+      padding: 19px 50px;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: #fff;
+      background-color: #c18f59;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .footer-contact-form .submit-button:hover {
+      background-color: #777;
+    }
+
+    @media (max-width: 1250px) {
+      .footer-contact-form {
+        width: 100%;
+      }
+    }
+
+    .footer-bottom {
+      padding: 25px 0;
+      background-color: #2d2d2d;
+    }
+
+    .footer-bottom-inner {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer-bottom-inner p {
+      color: #777;
+    }
+
+    .footer-bottom-inner a {
+      color: #4cd4ca;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .footer-bottom-inner a:hover {
+      color: #4c4c4c;
+    }
+
+    .footer-bottom-inner .footer-bottom__img img {
+      margin-right: 25px;
+    }
+
+    .footer-bottom-inner .footer-bottom__img img:last-child {
+      margin-right: 0;
+    }
+
+    @media (max-width: 992px) {
+      .footer-bottom-inner {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-bottom-inner p {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
 
 </head>
+
 <body>
 
-    <div id="particles-js">
-    <div class="wrapper">
+  <div id="particles-js">
+    <div class="olo" id="olo">
+      <div class="wrapper">
         <header>
-            <div class="logo">
-                <!-- <img src="images/logo.jpeg" alt=" " width="100px"> -->
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="projects.html">Projects</a></li>
-                    <!-- <li><a href="#">About Me</a></li> -->
-                    <li><a href="experience.html">Experience</a></li>
-                    <li><a href="#">About Me</a></li>
-                    <li class="btn"><a href="#">Keep in touch</a></li>
-                </ul>
-            </div>
+          <div class="logo">
+            <!-- <img src="images/logo.jpeg" alt=" " width="100px"> -->
+          </div>
+          <div class="menu">
+            <ul>
+              <div style="padding-bottom:10px;text-align:right">
+                <li><a href="projects.html">Projects</a></li>
+              </div>
+              <!-- <li><a href="#">About Me</a></li> -->
+              <div style="padding-bottom:10px;text-align:right">
+                <li><a href="experience.html">Experience</a></li>
+              </div>
+              <div style="padding-bottom:15px;text-align:right">
+                <li><a href="#">About Me</a></li>
+              </div>
+              <div style="text-align:right">
+                <li class="btn"><a href="#">Keep in touch</a></li>
+              </div>
+            </ul>
+          </div>
         </header>
         <div class="home" style="margin-left:10%;">
-            <div class="container">
-                <div class="person">
-                    <span class="person-overlay"></span>
-                    <!-- <img src="images/person.jpeg" alt=" "> -->
-                </div>
-                <div class="home-text">
-                    <h6 class="student">Student</h6>
-                    <h1 class="name">Ansh</h1>
-                    <p class="small-intro">Hello guys, my name is Ansh Chaturmohta - I am 19 years old</p>
-                </div>
+          <div class="container">
+            <div class="person">
+              <span class="person-overlay"></span>
+              <!-- <img src="images/person.jpeg" alt=" "> -->
             </div>
-        </div>
-        <div style="margin-left:10%">
-            <div class="wrapper2">
-                <div class="static-txt" style="color:white">I know</div>
-                <ul class="dynamic-txts">
-                    <li><span>C++</span></li>
-                    <li><span>C</span></li>
-                    <li><span>DSA</span></li>
-                    <li><span>Python</span></li>
-                    <li><span>HTML</span></li>
-                    <li><span>CSS</span></li>
-                    <li><span>JavaScript</span></li>
-                    <li><span>NodeJs</span></li>
-                    <li><span>ExpressJs</span></li>
-                    <li><span>ReactJs</span></li>
-                    <li><span>Bootstrap</span></li>
-                    <li><span>JQuery</span></li>
-                    <li><span>SQL</span></li>
-                    <li><span>MongoDB</span></li>
-                    <li><span>Blockchain</span></li>
-                    <li><span>Java</span></li>
-                    <li><span>ML</span></li>
-                </ul>
+            <div class="home-text col-lg-6" style="margin-top:90px">
+              <!-- <h6 class="student">Student</h6> -->
+              <h1 class="name" style="font-size:205px">Ansh</h1>
+              <p class="small-intro">Hello guys, my name is Ansh Chaturmohta - I am 19 years old. Dive in to know all
+                about me</p>
             </div>
+          </div>
         </div>
+        <!-- <div style="margin-left:10%;margin-top:-10px"> -->
+        <!-- <div class="wrapper2"> -->
+        <!-- <div class="static-txt" style="color:white">Skills-</div> -->
+        <!-- <ul class="dynamic-txts"> -->
+        <!-- <li><span>C++</span></li> -->
+        <!-- <li><span>C</span></li> -->
+        <!-- <li><span>DSA</span></li> -->
+        <!-- <li><span>Python</span></li> -->
+        <!-- <li><span>HTML</span></li> -->
+        <!-- <li><span>CSS</span></li> -->
+        <!-- <li><span>JavaScript</span></li> -->
+        <!-- <li><span>NodeJs</span></li> -->
+        <!-- <li><span>ExpressJs</span></li> -->
+        <!-- <li><span>ReactJs</span></li> -->
+        <!-- <li><span>Bootstrap</span></li> -->
+        <!-- <li><span>JQuery</span></li> -->
+        <!-- <li><span>SQL</span></li> -->
+        <!-- <li><span>MongoDB</span></li> -->
+        <!-- <li><span>Blockchain</span></li> -->
+        <!-- <li><span>Java</span></li> -->
+        <!-- <li><span>ML</span></li> -->
+        <!-- </ul> -->
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
     </div>
-    </div>
+  </div>
 
-<!-- JQUERY     -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<!-- LETTERING -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
-<!-- ANIME JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-<script src="particles.js"></script>
-<script src="app.js"></script>
-<script>
-    $(document).ready(function(){
-        $(".name,.student,.small-intro").lettering();
+  <div id="mobile" style="margin-top:-30%;width:inherit">
+    <header style="margin-top:-40%">
+      <div class="logo">
+        <!-- <img src="images/logo.jpeg" alt=" " width="100px"> -->
+      </div>
+      <div class="menu">
+        <ul>
+          <div style="padding-bottom:10px;text-align:right">
+            <li><a href="projects.html">Projects</a></li>
+          </div>
+          <!-- <li><a href="#">About Me</a></li> -->
+          <div style="padding-bottom:10px;text-align:right">
+            <li><a href="experience.html">Experience</a></li>
+          </div>
+          <div style="padding-bottom:15px;text-align:right">
+            <li><a href="#">About Me</a></li>
+          </div>
+          <div style="text-align:right">
+            <li class="btn"><a href="#">Keep in touch</a></li>
+          </div>
+        </ul>
+      </div>
+    </header>
+    <br>
+    <section class="fh5co-top-banner" style="text-align:center">
+      <div class="top-banner__inner site-container" style="text-align:center">
+        <!-- <div class="top-banner__image" style="text-align:center">
+                    <img src="images/person.jpeg" alt="author image">
+                </div> -->
+        <div class="top-banner__text" style="text-align:center">
+          <div class="top-banner__text-up" style="text-align:center">
+            <span class="brand-span">Hello! I'm</span>
+            <h2 class="top-banner__h2">Ansh</h2>
+          </div>
+          <div class="top-banner__text-up" style="text-align:center">
+            <h2 class="top-banner__h2">Chaturmohta</h2>
+            <!-- <span class="brand-span">I am 19 years old. Dive in to know all about me</span> -->
+          </div>
+          <!-- <p>One Man. One Mission. Can He Go Beyond?One Man. One Mission. Can He Go Beyond?</p>
+                    <a href="#" class="brand-button">Read bio > </a> -->
+        </div>
+      </div>
+      
+    </section>
+    
+    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum magnam eligendi corporis, unde doloremque beatae molestias culpa illum, reiciendis natus id iure libero, perspiciatis nulla dolor debitis commodi necessitatibus cum ut similique facere. Quidem reiciendis praesentium quisquam nemo temporibus quaerat minus animi consequatur, enim at sunt fuga nostrum deserunt adipisci amet odit nulla numquam exercitationem eos? Animi magni nesciunt nam doloribus id explicabo quidem, quisquam consequuntur voluptatum laudantium tempora velit laborum nostrum perspiciatis doloremque, inventore corporis ipsum deserunt rerum officiis a obcaecati! Temporibus eos quod, velit blanditiis dolorem consequatur adipisci modi hic, libero, iure nesciunt officiis! Cumque quam rerum est.
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident in voluptates officia non nam. Ex quidem pariatur minima nesciunt debitis sunt harum quaerat quibusdam necessitatibus ad porro at ea laborum beatae explicabo id eligendi, impedit eum nemo ab numquam dolores soluta. Ipsa, necessitatibus praesentium. Quae officiis sint aperiam aliquid quod ipsum repellendus rem consequatur provident cupiditate totam deleniti id dicta eligendi necessitatibus, corporis nesciunt saepe laudantium. Quibusdam earum quam hic illo doloribus quisquam laboriosam nostrum odit ipsam laborum minima facere vitae qui obcaecati exercitationem iure, saepe sed labore dignissimos aliquam deserunt eum. Ex provident cumque tenetur minus placeat quisquam. Totam possimus pariatur quibusdam et excepturi ipsum tempore! Cumque animi numquam mollitia minus architecto minima ut temporibus impedit nam explicabo, deserunt, excepturi illum, consequuntur cupiditate! Obcaecati iure earum voluptatem, possimus dicta labore ab deleniti autem illum. Officia consectetur corporis ab ipsum odio temporibus reprehenderit, sint magni deleniti earum voluptatibus necessitatibus quae, non sed est quis distinctio doloremque saepe sequi mollitia, adipisci molestias excepturi. Minima nam magni exercitationem totam. Laudantium dolore ducimus exercitationem nihil asperiores dolorem velit cupiditate molestias! Fugit eveniet veritatis voluptates vitae impedit aspernatur quam magnam cum cupiditate quia minima fuga debitis iusto dolorum non tempora, repudiandae eius iure ullam deleniti? Voluptatibus dolor dolores placeat voluptas beatae officiis, id molestiae nostrum optio autem repudiandae tenetur iusto suscipit enim veniam illo perspiciatis, libero, voluptatem voluptatum? Cupiditate doloremque iste recusandae ullam facilis neque commodi, alias voluptas atque deleniti ex inventore eum, dolore, id eius. Expedita minima unde incidunt quidem fugit, earum adipisci accusamus reprehenderit necessitatibus voluptatum reiciendis nostrum rerum esse nihil amet? Asperiores odio reprehenderit rerum nihil ad quis, veritatis iste soluta minima, modi fugiat placeat non voluptas cumque molestiae eius maiores alias quae nam, quaerat temporibus ipsam laboriosam? Natus labore nesciunt tenetur voluptatem, eligendi error quae ipsum at magnam explicabo voluptas rerum laudantium unde architecto id optio a ducimus aperiam necessitatibus. Temporibus sunt quisquam veniam beatae accusamus deleniti alias animi laboriosam. Sapiente, distinctio? Nemo, nihil tenetur? Ut delectus commodi ipsa illum reiciendis. Saepe, quaerat nisi illum, sit debitis consequuntur velit eum, omnis inventore optio itaque vel impedit. Officiis odit dicta sed repellendus, ducimus corrupti impedit qui dolores molestias ullam quaerat reprehenderit quam tempore accusamus sit minima nihil asperiores nisi cum architecto deleniti ratione rem labore? Corrupti repudiandae ad veniam facere minima nostrum illo, eaque doloremque expedita dolore praesentium temporibus rerum harum. Doloribus adipisci maxime est voluptatum molestias quos porro iusto molestiae non alias culpa, deleniti ipsam soluta facilis et modi vel cum nemo eius enim eveniet nihil libero nisi? Libero quibusdam hic maiores excepturi ab consequuntur, quos porro, veniam beatae reprehenderit, similique expedita amet deleniti placeat. Aliquid unde vel, est velit delectus aliquam eius quibusdam accusantium eveniet temporibus libero harum nihil maiores hic minima? Ratione voluptatem eaque impedit itaque officiis, asperiores saepe, corporis possimus quo sit rem eius sapiente, necessitatibus ducimus alias velit dolorum laborum tempora non laboriosam fugiat commodi voluptatibus accusamus. Culpa itaque sequi maiores? Quia odit voluptatum minus beatae deleniti, aut officia aliquid non molestias blanditiis fugiat, voluptas doloremque, hic vitae neque. Distinctio necessitatibus laboriosam natus obcaecati eveniet dolores ipsum similique vero fugiat voluptates sunt sed enim quidem dolorum assumenda, dolorem eligendi dolore error soluta doloremque commodi cupiditate officia? Odio, cupiditate ad necessitatibus magnam tempore voluptate unde nihil iste corrupti earum consectetur eaque maiores odit dignissimos ea nam! Accusamus, cum? Eaque aliquid tempora soluta labore voluptates quasi nesciunt consectetur eius facere tempore doloribus architecto ab aperiam, accusamus quidem dignissimos? Cupiditate ipsum voluptatum doloremque ipsam ea sit eius minima aspernatur asperiores doloribus recusandae quam dolores, ducimus reiciendis aliquam quaerat. Molestias quam quisquam sunt consectetur quasi veritatis consequatur voluptates, culpa iste doloribus dolorum exercitationem distinctio, maxime, unde corporis! Illo vero saepe veniam vel eum itaque ut facilis, ex eveniet vitae aspernatur facere sunt molestiae beatae aliquid numquam ullam, aliquam optio laudantium enim. Maxime praesentium provident ipsa cum, voluptas illum pariatur sint quod, eum iste saepe exercitationem? Asperiores animi dolor quam alias rem a, necessitatibus tenetur optio, reiciendis laboriosam ducimus. Sed eaque fuga voluptatibus exercitationem. Sit ipsam quam culpa deserunt, sequi quod illo laudantium distinctio a error quo amet sed quis maxime omnis, quaerat dolor molestias fugiat aliquid eius eum eaque dicta soluta? Sapiente inventore voluptatibus enim commodi placeat asperiores atque culpa repellendus distinctio eaque possimus esse illo, earum soluta sit perspiciatis, deserunt dolorum consectetur dolore doloremque nihil maxime voluptatem. Odit delectus excepturi beatae inventore commodi vitae omnis est sed earum nesciunt velit iure aut facilis ratione veniam quasi labore in quia, dolorum necessitatibus! Soluta, dolore sit totam, tempora in earum vel aliquid placeat cupiditate vitae fuga rem quia ullam labore ipsam voluptates perferendis! Dolor fugit atque, dignissimos sequi maiores sed minus incidunt. Consequatur corporis recusandae molestiae tempore adipisci aspernatur voluptatibus, libero quod non minus dolorum vel totam maiores sit nesciunt, cum, iusto repellat magnam eveniet incidunt nihil ipsa molestias? Enim, unde odio doloribus molestiae vel pariatur aperiam recusandae sit, magni labore fugiat quibusdam nemo earum autem optio modi saepe temporibus expedita dicta omnis obcaecati. Laudantium dolor quam harum, error libero iste nostrum magni beatae aliquid doloremque ex accusamus ipsa ipsam, veniam nihil vel animi voluptates natus possimus odit rerum sint necessitatibus? Dicta, illum similique nostrum accusantium repudiandae, in, a magni sed odio asperiores possimus beatae obcaecati necessitatibus minima. Totam dolores vitae quibusdam odio incidunt optio impedit labore voluptate pariatur eum sit, rerum similique iusto, voluptates ipsa amet ducimus animi, quis accusantium ea odit cumque qui repellendus. Nihil deserunt, iste nulla autem eum voluptatibus provident vel libero tenetur alias distinctio, perspiciatis fuga sit omnis quasi neque labore at recusandae minus! Inventore ex enim aperiam libero debitis est consectetur soluta, optio voluptatibus eligendi quia sapiente rem numquam ab qui tenetur laboriosam nam cupiditate! Beatae consequuntur, optio similique fugit alias accusantium repellat voluptatum eligendi! Laudantium distinctio sint doloribus quisquam, ex harum perferendis, debitis, eius aperiam mollitia dolorem voluptate eos nihil corrupti. Molestiae facere assumenda voluptates, fugit maxime repellendus temporibus. Voluptatem soluta perferendis omnis. Temporibus suscipit distinctio fuga nam aspernatur numquam, unde saepe natus voluptatem, facilis atque tenetur. Sit laborum voluptatibus natus dolore a cum! -->
+  </div>
 
-        anime({
-            targets: '.home .person-overlay',
-            translateX:1100,
-            delay:1000,
-            duration:1500,
-            easing:'easeInSine'
-        })
-        anime({
-            targets:'.home .person img',
-            opacity:1,
-            delay:1500,
-            duration:1500,
-            easing:'easeInSine'
-        })
-        anime({
-            targets:'.student span',
-            opacity:1,
-            duration:1500,
-            easing:'easeInSine',
-            delay:anime.stagger(100,{start:500})
-        })
-        anime({
-            targets:'.name span',
-            opacity:1,
-            duration:1500,
-            easing:'easeInSine',
-            delay:anime.stagger(100,{start:2000})
-        })
-        anime({
-            targets:'.name .char1,.name .char2,.name .char3,.name .char4',
-            keyframes:[
-                {translateY:100,duration:1500}
-            ],
-            easing:'easeInOutExpo',
-            delay:3500,
-        })
-        anime({
-            targets:'.small-intro span',
-            opacity:1,
-            duration:5,
-            easing:'easeInSine',
-            delay:anime.stagger(50,{start:5000})
-        })
-        anime({
-            targets:'.menu li',
-            opacity:1,
-            duration:3000,
-            delay:anime.stagger(150,{start:8500})
-        })
-        // anime({
-        //     targets:'.wrapper2',
-        //     opacity:1,
-        //     duration:1000,
-        //     delay:anime.stagger(150,start(1500))
-        // })
+  <div  id="tab">
+    <header style="margin-top:-40%">
+      <div class="logo">
+        <!-- <img src="images/logo.jpeg" alt=" " width="100px"> -->
+      </div>
+      <div class="menu">
+        <ul>
+          <div style="padding-bottom:10px;text-align:right">
+            <li><a href="projects.html">Projects</a></li>
+          </div>
+          <!-- <li><a href="#">About Me</a></li> -->
+          <div style="padding-bottom:10px;text-align:right">
+            <li><a href="experience.html">Experience</a></li>
+          </div>
+          <div style="padding-bottom:15px;text-align:right">
+            <li><a href="#">About Me</a></li>
+          </div>
+          <div style="text-align:right">
+            <li class="btn"><a href="#">Keep in touch</a></li>
+          </div>
+        </ul>
+      </div>
+    </header>
+    <section class="fh5co-about-me">
+      <div class="about-me-inner site-container">
+        <article class="portfolio-wrapper">
+          <div class="portfolio__img">
+            <img src="images/person.jpeg" class="about-me__profile" alt="about me profile picture">
+          </div>
+          <div class="portfolio__bottom">
+            <div class="portfolio__name">
+              <span style="color:white">Ansh</span>
+              <!-- <h2 class="universal-h2">nsh</h2> -->
+              <!-- <br> -->
+              <!-- <span>C</span> -->
+              <!-- <h3 class="universal-h3">haturmohta</h3> -->
+            </div>
+            <div class="portfolio__name">
+              <!-- <span>A</span> -->
+              <!-- <h3 class="universal-h3">nsh</h3> -->
+              <!-- <br> -->
+              <!-- <span>C</span> -->
+              <h1 style="color:white;font-size: 40px;">Chaturmohta</h1>
+            </div>
+            <p style="color:black">Hello guys, my name is Ansh Chaturmohta - I am 19 years old. Dive in to know all
+              about me</p>
+          </div>
+        </article>
+        <!-- <div class="about-me__text">
+          <div class="about-me-slider">
+            <div class="about-me-single-slide">
+              <h2 class="universal-h2 universal-h2-bckg">About me</h2>
+              <p><span>H</span> e has work appearing or forthcoming in over a dozen venues, including Buzzy Mag, The Spirit of Poe, and the British Fantasy Society journal Dark Horizons. He is also CEO of a company, specializing in custom book publishing and social media marketing services, have created a community for authors to learn and connect.He has work appearing or forthcoming in over a dozen venues, including Buzzy Mag, The Spirit of Poe, and have created a community for authors to learn and connect.</p>
+              <h4>Author</h4>
+              <p class="p-white">See me</p>
+            </div>
+            <div class="about-me-single-slide">
+              <h2 class="universal-h2 universal-h2-bckg">About me 2</h2>
+              <p><span>H</span> e has work appearing or forthcoming in over a dozen venues, including Buzzy Mag, The Spirit of Poe, and the British Fantasy Society journal Dark Horizons. He is also CEO of a company, specializing in custom book publishing and social media marketing services, have created a community for authors to learn and connect.He has work appearing or forthcoming in over a dozen venues, including Buzzy Mag, The Spirit of Poe, and have created a community for authors to learn and connect.</p>
+              <h4>Author</h4>
+              <p class="p-white">See me</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <!-- <div class="about-me-bckg"></div> -->
+    </section>
+  </div>
+
+  <!-- JQUERY     -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- LETTERING -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+  <!-- ANIME JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="particles.js"></script>
+  <script src="app.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".name,.student,.small-intro").lettering();
+
+      anime({
+        targets: '.home .person-overlay',
+        translateX: 1100,
+        delay: 1000,
+        duration: 1500,
+        easing: 'easeInSine'
+      })
+      anime({
+        targets: '.home .person img',
+        opacity: 1,
+        delay: 1500,
+        duration: 1500,
+        easing: 'easeInSine'
+      })
+      anime({
+        targets: '.student span',
+        opacity: 1,
+        duration: 1500,
+        easing: 'easeInSine',
+        delay: anime.stagger(100, { start: 500 })
+      })
+      anime({
+        targets: '.name span',
+        opacity: 1,
+        duration: 1500,
+        easing: 'easeInSine',
+        delay: anime.stagger(100, { start: 2000 })
+      })
+      anime({
+        targets: '.name .char1,.name .char2,.name .char3,.name .char4',
+        keyframes: [
+          { translateY: 100, duration: 1500 }
+        ],
+        easing: 'easeInOutExpo',
+        delay: 3500,
+      })
+      anime({
+        targets: '.small-intro span',
+        opacity: 1,
+        duration: 5,
+        easing: 'easeInSine',
+        delay: anime.stagger(50, { start: 5000 })
+      })
+      anime({
+        targets: '.menu li',
+        opacity: 1,
+        duration: 3000,
+        delay: anime.stagger(150, { start: 0 })
+      })
+      // anime({
+      //     targets:'.wrapper2',
+      //     opacity:1,
+      //     duration:1000,
+      //     delay:anime.stagger(150,start(1500))
+      // })
     });
-</script>
-
+  </script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
