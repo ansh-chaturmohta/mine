@@ -60,13 +60,19 @@
     body{
         background: none;
     
-        background-color:black;
-        /* background-image: url('images/person.jpeg'); */
-            /* background-repeat: no-repeat; */
-            /* background-size: cover; */
+        /* background-color:black; */
+        background-image: url('images/person.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
             /* height: 300%; */
             /* backgrou */
-            /* background-position-y: 30%; */
+            background-position: center;
+    }
+    #mobi2{
+        display:none;
+    }
+    #olo{
+        display:none;
     }
 }
 @media only screen and (min-width:426px){
