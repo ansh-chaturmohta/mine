@@ -19,11 +19,14 @@
     #tab{
         display: none;
     }
+    #mobile{
+        display:none;
+    }
 }
 @media only screen and (min-width:806px){
-    /* #olo{ */
-        /* display:none; */
-    /* } */
+    #olo{
+        display:block;
+    }
     body{
         background-image: url('images/person.jpeg');
             background-repeat: no-repeat;
@@ -35,6 +38,9 @@
         display:none;
     }
     #tab{
+        display:none;
+    }
+    #mobi2{
         display:none;
     }
 }
