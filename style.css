@@ -2,7 +2,7 @@
     #olo{
         display:none;
     }
-    #mobile{
+    #mobi2{
         display:block;
     }
     body{
@@ -15,6 +15,9 @@
             height: 300%;
             /* backgrou */
             background-position-y: 30%;
+    }
+    #tab{
+        display: none;
     }
 }
 @media only screen and (min-width:806px){
@@ -31,6 +34,9 @@
     #mobile{
         display:none;
     }
+    #tab{
+        display:none;
+    }
 }
 
 @media only screen and (max-width:426px){
@@ -39,6 +45,11 @@
     }
     #tab{
         display:block;
+         background-image: url('images/person.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-position: center;
+            /* display: none; */
     }
     body{
         background: none;
@@ -53,9 +64,12 @@
     }
 }
 @media only screen and (min-width:426px){
-    /* #olo{ */
-        /* display:none; */
-    /* } */
+    #olo{
+        display:none;
+    }
+    #mobile{
+        display:none;
+    }
     body{
         background-image: url('images/person.jpeg');
             background-repeat: no-repeat;
@@ -65,5 +79,8 @@
     }
     #tab{
         display:none;
+    }
+    #mobi2{
+        display:block;
     }
 }
