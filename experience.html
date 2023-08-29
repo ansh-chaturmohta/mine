@@ -4,15 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience</title>
+    <title>Experiences Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="shortcut icon"
-          href="images/Ansh-logos/Ansh-logos_transparent.png"
-          type="image/x-icon">
+    <link rel="shortcut icon" href="images/Ansh-logos/Ansh-logos_transparent.png" type="image/x-icon">
     <style>
         * {
             padding: 0;
@@ -21,740 +19,443 @@
         }
 
         body {
+            /* content:'';
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0f1b27;
+            color: #ffffff; */
             content: '';
             text-align: center;
-            background-image: url("images/bgpro.jpg");
+            /* background-image: url("images/bgpro.jpg"); */
             opacity: 1;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-color: black;
+            background-color: #0f1b27;
             color: rgb(178, 176, 176);
             font-family: 'Bebas Neue', cursive;
-            background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
-            /* background-size: 400% 400%; */
-            /* animation: gradient 4s ease infinite; */
+            /* font-size: xx-large; */
         }
 
-        /* @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-
-            /* overflow: hidden; */
-        /* } */ 
-
-        body,
-        html {
-            height: 100%;
-        }
-
-        /* body { */
-        /* background: black; */
-        /* background-size: cover; */
-        /* margin: 0; */
-        /* padding: 0; */
-        /* font-family: helvetica, arial, tahoma, verdana; */
-        /* line-height: 20px; */
-        /* font-size: 14px; */
-        /* color: #726f77; */
-        /* } */
         a {
             color: rgb(178, 176, 176);
             text-decoration: none;
-            text-transform: uppercase;
+            /* text-transform: uppercase; */
             transition: all ease 0.7s;
         }
-
-        a:hover {
+        a:hover{
             color: #4cd4ca;
             text-decoration: none;
-        }
-
-        canvas {
-            display: block;
-        }
-
-        @import "https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700";
-
-        header:after,
-        #timeline .timeline-item:after,
-        header:before,
-        #timeline .timeline-item:before {
-            content: '';
-            display: block;
-            width: 100%;
-            clear: both;
-        }
-
-        *,
-        *:before,
-        *:after {
-            box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-        }
-
-
-
-        img {
-            max-width: 100%;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4 {
-            /* font-family: "Dosis", arial, tahoma, verdana; */
-            font-weight: 500;
-        }
-
-        .project-name {
-            text-align: center;
-            padding: 10px 0;
         }
 
         header {
-            background: #2b2e48;
-            padding: 10px;
-            -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
-            -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
-            -ms-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
-            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+            background-color: black;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
         }
 
-        header .logo {
-            color: #4cd4ca;
-            float: left;
-            font-family: "Dosis", arial, tahoma, verdana;
-            font-size: 22px;
-            font-weight: 500;
-        }
-
-        header .logo>span {
-            color: #f7aaaa;
-            font-weight: 300;
-        }
-
-        header .social {
-            float: right;
-        }
-
-        header .social .btn {
-            font-family: "Dosis";
-            font-size: 14px;
-            margin: 10px 5px;
-        }
-
-        #timeline {
-            width: 100%;
-            margin: 30px auto;
-            position: relative;
-            padding: 0 10px;
-            -webkit-transition: all 0.4s ease;
-            -moz-transition: all 0.4s ease;
-            -ms-transition: all 0.4s ease;
-            transition: all 0.4s ease;
-        }
-
-        #timeline:before {
-            content: "";
-            width: 3px;
-            height: 100%;
-            background: #4cd4ca;
-            left: 50%;
-            top: 0;
-            position: absolute;
-        }
-
-        #timeline:after {
-            content: "";
-            clear: both;
-            display: table;
-            width: 100%;
-        }
-
-        #timeline .timeline-item {
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        #timeline .timeline-item .timeline-icon {
-            background: #4cd4ca;
-            width: 50px;
-            height: 50px;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            overflow: hidden;
-            margin-left: -23px;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            border-radius: 50%;
-        }
-
-        #timeline .timeline-item .timeline-icon svg {
-            position: relative;
-            top: 14px;
-            left: 14px;
-        }
-
-        #timeline .timeline-item .timeline-content {
-            width: 45%;
-            background: #fff;
-            padding: 20px;
-            -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-            -moz-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-            -ms-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-            box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-            -ms-border-radius: 5px;
-            border-radius: 5px;
-            -webkit-transition: all 0.3s ease;
-            -moz-transition: all 0.3s ease;
-            -ms-transition: all 0.3s ease;
-            transition: all 0.3s ease;
-        }
-
-        #timeline .timeline-item .timeline-content h2 {
-            padding: 15px;
-            background: #4cd4ca;
-            color: #fff;
-            margin: -20px -20px 0 -20px;
-            font-weight: 300;
-            -webkit-border-radius: 3px 3px 0 0;
-            -moz-border-radius: 3px 3px 0 0;
-            -ms-border-radius: 3px 3px 0 0;
-            border-radius: 3px 3px 0 0;
-        }
-
-        #timeline .timeline-item .timeline-content:before {
-            content: '';
-            position: absolute;
-            left: 45%;
-            top: 20px;
-            width: 0;
-            height: 0;
-            border-top: 7px solid transparent;
-            border-bottom: 7px solid transparent;
-            border-left: 7px solid #4cd4ca;
-        }
-
-        #timeline .timeline-item .timeline-content.right {
-            float: right;
-        }
-
-        #timeline .timeline-item .timeline-content.right:before {
-            content: '';
-            right: 45%;
-            left: inherit;
-            border-left: 0;
-            border-right: 7px solid #4cd4ca;
-        }
-
-        .btn {
-            padding: 5px 15px;
+        .back-link {
+            color: #ecf0f1;
             text-decoration: none;
-            background: transparent;
-            border: 2px solid #4cd4ca;
-            color: #4cd4ca;
-            display: inline-block;
-            position: relative;
-            text-transform: uppercase;
-            font-size: 12px;
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-            -ms-border-radius: 5px;
-            border-radius: 5px;
-            -webkit-transition: background 0.3s ease;
-            -moz-transition: background 0.3s ease;
-            -ms-transition: background 0.3s ease;
-            transition: background 0.3s ease;
-            -webkit-box-shadow: 2px 2px 0 #4cd4ca;
-            -moz-box-shadow: 2px 2px 0 #4cd4ca;
-            -ms-box-shadow: 2px 2px 0 #4cd4ca;
-            box-shadow: 2px 2px 0 #4cd4ca;
+            font-size: 0.9rem;
         }
 
-        .btn:hover {
-            box-shadow: none;
-            top: 2px;
-            left: 2px;
-            -webkit-box-shadow: 2px 2px 0 transparent;
-            -moz-box-shadow: 2px 2px 0 transparent;
-            -ms-box-shadow: 2px 2px 0 transparent;
-            box-shadow: 2px 2px 0 transparent;
+        .category {
+            padding: 50px;
         }
 
-        @media screen and (max-width: 768px) {
-            #timeline {
-                margin: 30px;
-                padding: 0px;
-                width: 90%;
-            }
-
-            #timeline:before {
-                left: 0;
-            }
-
-            #timeline .timeline-item .timeline-content {
-                width: 90%;
-                float: right;
-            }
-
-            #timeline .timeline-item .timeline-content:before,
-            #timeline .timeline-item .timeline-content.right:before {
-                left: 10%;
-                margin-left: -6px;
-                border-left: 0;
-                border-right: 7px solid #4cd4ca;
-            }
-
-            #timeline .timeline-item .timeline-icon {
-                left: 0;
-            }
+        .category1 {
+            background-color: #1a2933;
         }
 
-        @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
-
-        .wrapper {
-            animation: scroll 70s linear infinite;
-            background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"), #111111;
-            color: #eee;
-            /* height: 100vh; */
-            min-width: 360px;
-            width: 100%;
-            display: flex;
-            /* justify-content: center; */
-            align-items: center;
-            perspective: 1000px;
-            perspective-origin: 50% 50%;
-            position:fixed;
-            /* left:50px */
+        .category2 {
+            background-color: #0f1b27;
         }
 
-        @keyframes scroll {
-            100% {
-                background-position: 0px -3000px;
-            }
+        .category3 {
+            background-color: #1a2933;
         }
 
-        @media (prefers-reduced-motion) {
-            .wrapper {
-                animation: scroll 200s linear infinite;
-            }
+        .experience {
+            background-color: rgba(255, 255, 255, 0.1);
+            /* border-radius: 10px; */
+            padding: 30px;
+            /* margin: 20px 0; */
+            /* display: flex; */
+            /* flex-direction: column; */
+            text-align: center;
         }
 
-        @media (min-width: 670px) {
-            .title {
-                font-size: 5rem;
-            }
+        .experience img {
+            max-width: 250px;
+            margin-bottom: 10px;
         }
 
-        .ml4 {
-            position: relative;
-            font-weight: 900;
-            font-size: 4.5em;
+        .name {
+            font-size: 2.2rem;
+            font-weight: bold;
         }
 
-        .ml4 .letters {
-            position: absolute;
+        .duration {
+            font-size: 0.9rem;
+            color: #95a5a6;
+        }
+
+        .tech-stack {
+            font-size: 0.9rem;
+            color: #95a5a6;
+        }
+
+        .experience-text {
+            margin-top: 10px;
+            width: 60%;
             margin: auto;
-            left: 0;
-            top: 0.3em;
-            right: 0;
-            opacity: 0;
+            padding-top: 30px;
+            text-align: justify;
         }
 
-        /* .ml3 { */
-            /* font-weight: 900; */
-            /* font-size: 3.5em; */
-        /* } */
-    </style>
+        .social-media {
+            margin-top: 10px;
+        }
 
+        .social-icon {
+            margin-right: 10px;
+            color: #ffffff;
+            font-size: 1.2rem;
+        }
+
+        .ml11 {
+            font-weight: 700;
+            font-size: 1em;
+        }
+
+        .ml11 .text-wrapper {
+            position: relative;
+            display: inline-block;
+            padding-top: 0.2em;
+            padding-right: 0.05em;
+            padding-bottom: 0.15em;
+        }
+
+        .ml11 .line {
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 3px;
+            background-color: #fff;
+            transform-origin: 0 50%;
+        }
+
+        .ml11 .line1 {
+            top: 0;
+            left: 0;
+        }
+
+        .ml11 .letter {
+            display: inline-block;
+            line-height: 1em;
+        }
+
+        .text-large{
+            font-weight: 600;
+            font-size: 3em;
+        }
+
+        .text-mid{
+            font-weight: 400;
+            font-size: 1.5em;
+        }
+        
+        .text-small{
+            font-weight: 300;
+            font-size: 1.2em;
+        }
+
+        .blue-col{
+            color: #4cd4ca;
+        }
+
+        .p1{
+            text-align: end;
+        }
+        .p2{
+            text-align: start;
+            padding-top: 1%;
+        }
+        @media (max-width: 992px) {
+            .p1{
+                text-align: center;
+            }
+            .p2{
+                text-align: center;
+            }
+        }
+        
+    </style>
 </head>
 
 <body>
-    <div style="position: fixed;background-color:black;overflow:hidden;z-index:99;width:100%;padding-top:5px;overflow-x:hidden;"
-        class="wrapper">
-        <div style="padding-left:10%;">
-            <div style="color:white;display:inline;">
-                <h1 style="font-size:65px;right:0;">
-                    Experience
-                </h1>
-            </div>
-            <div style="display:inline;margin-top:-100px">
-                <a href="index.html">Back to landing page</a>
-            </div>
+    <!-- <header>
+        <h1>Experiences</h1>
+        <a href="index.html" class="back-link">Back to Home</a>
+    </header> -->
+    <div style="position: fixed;background-color:#0f1b27;overflow:hidden;z-index:99;width:100%;">
+        <div style="color:white;font-size:65px;background-color:#0f1b27;">
+            <h1 class="ml11">
+                <span class="text-wrapper">
+                    <span class="line line1"></span>
+                    <span class="letters">EXPERIENCE</span>
+                </span>
+            </h1>
         </div>
+        <a href="index.html">Back to landing page</a>
     </div>
-    <div class="container" style="padding-top:110px">
-        <div id="timeline">
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="-4px" y="0px" width="0px" height="0px"
-                        viewBox="0 0 21 20" enable-background="new 0 4 25 20" xml:space="preserve">
-                    </svg>
 
-                </div>
-                <div class="timeline-content">
-                    <h2 class="ml4" style="height:100px;background-color:#4cd4ca">
-                        <span class="letters letters-1" style="font-size:30px">Masai School</span>
-                        <span class="letters letters-2" style="font-size:30px">DSA problem setter</span>
-                        <span class="letters letters-3" style="font-size:15px;text-align:right">May 2022 - Present </span>
-                    </h2>
-                    <p style="padding-top:20px;color:rgb(104, 104, 104);" class="ml31">
-                        Masai School is a startup based out of bengaluru which teaches DSA and other job oriented skills to people seeking to crack big tech companies. I am working here as a DSA problem setter and tester intern.
-                    </p>
+    <div class="category category1" style="padding-top: 200px;">
+        <h1>Software Development</h1>
+        <div class="experience row" style="padding-top: 20px;display: flex;">
+            <div class="col-lg-6 p1">
+                <img src="images/zepto2.jfif" alt="Zepto Logo">
+            </div>
+            <div class="col-lg-6 p2">
+                <div class="name text-large">Zepto</div>
+                <div class="role text-mid" style="text-transform: lowercase;">Software Developer Engineer Intern</div>
+                <div class="duration text-mid">Coming soon...</div>
+                <div class="tech-stack text-mid"></div>
+            </div>
+            <div class="col-lg-12">
+                <div class="experience-text text-small" style="text-align: center;">
+                    Upcoming Software Developer Intern at Zepto during summer '24.    
                 </div>
             </div>
-
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0px" height="0px"
-                        viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
-                        <g>
-                        </g>
-                    </svg>
-
-                </div>
-                <div class="timeline-content right">
-                    <h2 class="ml4" style="height:100px;background-color:#4cd4ca">
-                        <span class="letters letters-1" style="font-size:30px">Caerus</span>
-                        <span class="letters letters-2" style="font-size:30px">Web Developer</span>
-                        <span class="letters letters-3" style="font-size:15px;text-align:right">Dec 2021 - Jan
-                            2022</span>
-                    </h2>
-                    <p style="padding-top:20px;color:rgb(104, 104, 104);" class="ml32">
-                        Caerus infotech Solutions is a startup which provides internet based solutions to other
-                        companies. I worked here as a Web Development Intern for a period of two months.
-                    </p>
-                </div>
+            <div class="social-media col-lg-12">
+                <!-- <a href="#" class="social-icon">Facebook</a> -->
+                <a href="https://www.zepto.co.in/" class="social-icon"><img src="images/web1.png" alt="" width="55px"></a>
+                <a href="https://www.linkedin.com/company/zeptonow/" class="social-icon"><img src="images/linkedin.png" alt=""></a>
             </div>
-
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0px" height="0px"
-                        viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
-                    </svg>
-
-                </div>
-                <div class="timeline-content">
-                    <h2 class="ml4" style="height:100px;background-color:#4cd4ca">
-                        <span class="letters letters-1" style="font-size:30px">Saloop.in</span>
-                        <span class="letters letters-2" style="font-size:30px">Web Developer</span>
-                        <span class="letters letters-3" style="font-size:15px;text-align:right">Dec 2021 - Dec
-                            2021</span>
-                    </h2>
-                    <p style="padding-top:20px;color:rgb(104, 104, 104);" class="ml33">
-                        Saloop.in is an online e-commerce store that caters to salon and beauty needs.I worked here as a
-                        Full Stack Web Developer Intern for a period of 1 month.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0px" height="0px"
-                        viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
-                        <g>
-                        </g>
-                    </svg>
-
-                </div>
-                <div class="timeline-content right">
-                    <h2 class="ml4" style="height:100px;background-color:#4cd4ca">
-                        <span class="letters letters-1" style="font-size:30px">LTT</span>
-                        <span class="letters letters-2" style="font-size:30px">Tutor/Mentor</span>
-                        <span class="letters letters-3" style="font-size:15px;text-align:right">Mar 2021 - Oct
-                            2021</span>
-                    </h2>
-                    <p style="padding-top:20px;color:rgb(104, 104, 104);" class="ml34">
-                        Learn To Thrive is an organisation started by students of IIT Kharagpur that teaches college
-                        students various coding languages and prepares them for coding interviews.I worked here as
-                        Teacher/Mentor for students and also created a website for the organisation during my time
-                        there.I worked here for a period of 8 months.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0px" height="0px"
-                        viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
-                    </svg>
-
-                </div>
-                <div class="timeline-content">
-                    <h2 class="ml4" style="height:100px;background-color:#4cd4ca">
-                        <span class="letters letters-1" style="font-size:30px">BFX</span>
-                        <span class="letters letters-2" style="font-size:30px">Tutor/Mentor</span>
-                        <span class="letters letters-3" style="font-size:15px;text-align:right">Mar 2021 - Sept
-                            2021</span>
-                    </h2>
-                    <p style="padding-top:20px;color:rgb(104, 104, 104);" class="ml33">
-                        Being Artifex is an organisation started by students of IIT Dhanbad that teaches young minds
-                        both technical and non technical skills. I worked here as a Teacher/Mentor in the web
-                        development section for a period of 7 months.
-                    </p>
-                </div>
-            </div>
+            
         </div>
     </div>
 
+    <div class="category category2">
+        <h1>Problem Setting/ DSA</h1>
+        <div class="experience row" style="padding-top: 20px;display: flex;">
+            <div class="col-lg-6 p1">
+                <img src="images/levelup.jfif" alt="LevelUp Logo">
+            </div>
+            <div class="col-lg-6 p2">
+                <div class="name text-large">LevelUp</div>
+                <div class="role text-mid" style="text-transform: lowercase;">Problem Setter</div>
+                <div class="duration text-mid">July '23 - Present</div>
+                <div class="tech-stack text-mid">Data Structures, Maths, Algorithms, Problem Solving</div>
+            </div>
+            <div class="col-lg-12">
+                <div class="experience-text text-small">
+                    Driven Problem Setter at LevelUp, contributing to interview success by creating dynamic DSA problems encompassing logic, mathematics, and data structures. By designing rigorous challenges and mind-bending MCQs, I am committed to honing candidates' abilities to tackle real-world scenarios and complex problem domains. 
 
+                    - Committed to enhancing candidate preparedness and fostering critical thinking.
 
+                    - Dedicated to equipping aspiring professionals with the skills they need to excel in interviews.
 
-    <!-- JQUERY     -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- LETTERING -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
-    <!-- ANIME JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <!-- Particle JS -->
-    <script src="particles.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="app.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
-    <script>
+                    - Additionally, I craft engaging multiple-choice questions (MCQs) that span the realms of logic, mathematics, and DSA, stimulating intellect and analytical prowess.
+                </div>
+            </div>
+            <div class="social-media col-lg-12">
+                <!-- <a href="#" class="social-icon">Facebook</a> -->
+                <a href="https://levelup.inc/" class="social-icon"><img src="images/web1.png" alt="" width="55px"></a>
+                <a href="https://www.linkedin.com/company/levelupinchq/" class="social-icon"><img src="images/linkedin.png" alt=""></a>
+            </div>
+            
+        </div>
+        <!-- Add more experience components here -->
+        <div class="experience row" style="padding-top: 20px;display: flex;">
+            <div class="col-lg-6 p1">
+                <img src="images/masai.jfif" alt="Masai Logo">
+            </div>
+            <div class="col-lg-6 p2">
+                <div class="name text-large">Masai School</div>
+                <div class="role text-mid" style="text-transform: lowercase;">DSA Problem Setter/Tester</div>
+                <div class="duration text-mid">May '22 - June '23</div>
+                <div class="tech-stack text-mid">DSA, Competitive Programming, Problem Testing, Problem Solving</div>
+            </div>
+            <div class="col-lg-12">
+                <div class="experience-text text-small">
+                    Creating and testing problems revolving around Data Structures, Algorithms and Maths for students preparing for coding rounds and interviews of tech companies. Writing editorials on the problems for a better understanding of the concept and approach
 
-        var origin;
+                    - Created over 350 problems related to DSA, Maths and logic
 
-        var frame = 0;
-        var flyBoxCount = 20;
-        var flyBoxes = [];
-        var flyBoxPause = 200;
-        var flyBoxColors = [];
+                    - Tested 200+ problems created by different problem setters.
+                </div>
+            </div>
+            <div class="social-media col-lg-12">
+                <!-- <a href="#" class="social-icon">Facebook</a> -->
+                <a href="https://www.masaischool.com/" class="social-icon"><img src="images/web1.png" alt="" width="55px"></a>
+                <a href="https://www.linkedin.com/school/masai-school/" class="social-icon"><img src="images/linkedin.png" alt=""></a>
+            </div>
+            
+        </div>
+    </div>
 
-        function setup() {
-            createCanvas(windowWidth, windowHeight);
-            origin = createVector(windowWidth / 2, windowHeight / 2);
+    <div class="category category3">
+        <h1>Web Development</h1>
+        <div class="experience row" style="padding-top: 20px;display: flex;">
+            <div class="col-lg-6 p1">
+                <img src="images/caerus.jfif" alt="Caerus Logo">
+            </div>
+            <div class="col-lg-6 p2">
+                <div class="name text-large">Caerus Infotech Solutions</div>
+                <div class="role text-mid" style="text-transform: lowercase;">Web Development Intern</div>
+                <div class="duration text-mid">December '21 - Jan '22</div>
+                <div class="tech-stack text-mid">Firebase, Node.js, Express.js, MongoDB</div>
+            </div>
+            <div class="col-lg-12">
+                <div class="experience-text text-small">
+                    Full stack web developer role at caerus infotech. Creating web based solutions for startups was precisely my role at caerus infotech. Building web-based solutions for startups and helping them grow their brands. Helping startups make a name and promote their product/service
 
-            for (i = -flyBoxCount / 2; i < flyBoxCount / 2; i++) {
-                var box = createFlyBox(i);
-                box.start();
-                flyBoxes.push(box);
-            }
+                    - Learnt how to integrate branding into a website.
 
-            var getRandColor = () => {
-                return color(random(100, 200), random(100, 200), random(100, 200));
-            }
+                    - Integrating firebase into a website
+                </div>
+            </div>
+            <div class="social-media col-lg-12">
+                <!-- <a href="#" class="social-icon">Facebook</a> -->
+                <a href="https://caerusinfotech.in/" class="social-icon"><img src="images/web1.png" alt="" width="55px"></a>
+                <a href="https://www.linkedin.com/company/caerusinfotechsolutions/about/" class="social-icon"><img src="images/linkedin.png" alt=""></a>
+            </div>
+            
+        </div>
+        <div class="experience row" style="padding-top: 20px;display: flex;">
+            <div class="col-lg-6 p1">
+                <img src="images/saloop.jfif" alt="Saloop Logo">
+            </div>
+            <div class="col-lg-6 p2">
+                <div class="name text-large">Saloop.in</div>
+                <div class="role text-mid" style="text-transform: lowercase;">Full stack web developer Intern</div>
+                <div class="duration text-mid">November '21 - December '21</div>
+                <div class="tech-stack text-mid">JAVA, SQL, Javascript, HTML</div>
+            </div>
+            <div class="col-lg-12">
+                <div class="experience-text text-small">
+                    Worked as a full stack web developer with the team working on the e-commerce website. Working as an intern, while building an entire e-commerce from scratch, with new tech stacks. Dedicated and driven towards learning new tech stacks and using them to develop efficient products.
 
-            flyBoxColors.push(color('#f2623a'));
-            flyBoxColors.push(color('#3af262'));
-            flyBoxColors.push(color('#623af2'));
-            flyBoxColors.push(color('#f23a58'));
-            flyBoxColors.push(color('#caf23a'));
-        }
+                    - Worked on new tech stacks like Java ,SQL etc.
 
-        function draw() {
-            rectMode(CENTER);
-            for (i = 0; i < flyBoxCount; i++) {
-                var flyBox = flyBoxes[i];
-                flyBox.draw();
-            }
+                    - Learnt about implementing search query in products and filtering them on the basis of desired attributes
+                </div>
+            </div>
+            <div class="social-media col-lg-12">
+                <!-- <a href="#" class="social-icon">Facebook</a> -->
+                <a href="https://www.saloop.in/" class="social-icon"><img src="images/web1.png" alt="" width="55px"></a>
+                <a href="https://www.linkedin.com/company/saloop-official/" class="social-icon"><img src="images/linkedin.png" alt=""></a>
+            </div>
+            
+        </div>
+    </div>
+    <div class="category category2">
+        <h1>Teacher/Mentor</h1>
+        <div class="experience row" style="padding-top: 20px;display: flex;">
+            <div class="col-lg-6 p1">
+                <img src="images/scaler.jfif" alt="Scaler Logo">
+            </div>
+            <div class="col-lg-6 p2">
+                <div class="name text-large">Scaler</div>
+                <div class="role text-mid" style="text-transform: lowercase;">Teaching Assisstant</div>
+                <div class="duration text-mid">July '23 - Present</div>
+                <div class="tech-stack text-mid">Data Structures, Maths, Algorithms, C++</div>
+            </div>
+            <div class="col-lg-12">
+                <div class="experience-text text-small">
+                    Experienced TA at Scaler, dedicated to clarifying doubts, guiding learning, and fostering collaboration. Committed to empowering students for excellence in the tech industry. Passionate about creating an inspiring and supportive learning environment.
 
-            // WIP
-            stroke(0, 0, 0);
-            strokeWeight(40);
-            noFill();
-            translate(origin.x, origin.y);
-            rotate((sin(frame * 0.02) + cos(frame * 0.03)) * PI);
-            //rect(0, 0, 300, 300);
+                    - Role involves curating a diverse range of Data Structures and Algorithms (DSA) problems that push boundaries and encourage creative problem-solving
 
-            frame += 1;
-        }
+                    - Adept at clarifying doubts, guiding learning pathways, and fostering a collaborative and engaging educational environment. 
 
-        function createFlyBox(offset) {
-            return {
-                offset: offset,
-                delay: 0,
-                getRandomDelay: () => { return random(0, flyBoxCount) * 15; },
-                steps: 0,
-                directions: [createVector(-1, -1), createVector(-1, 1), createVector(1, -1), createVector(1, 1)],
-                currentDirection: 0,
-                iteration: 0,
-                size: 80,
-                start: function () {
-                    this.delay = this.getRandomDelay();
-                    this.steps = -this.delay;
-                },
-                draw: function () {
-                    this.steps += 20;
+                    - Equipped with excellent communication skills and a deep understanding of the subjects, I am dedicated to empowering students on their learning journey and contributing to their academic growth</div>
+            </div>
+            <div class="social-media col-lg-12">
+                <!-- <a href="#" class="social-icon">Facebook</a> -->
+                <a href="https://www.scaler.com/" class="social-icon"><img src="images/web1.png" alt="" width="55px"></a>
+                <a href="https://www.linkedin.com/school/scalerofficial/" class="social-icon"><img src="images/linkedin.png" alt=""></a>
+            </div>
+            
+        </div>
+        <!-- Add more experience components here -->
+        <div class="experience row" style="padding-top: 20px;display: flex;">
+            <div class="col-lg-6 p1">
+                <img src="images/logo.jpg" alt="LTT Logo">
+            </div>
+            <div class="col-lg-6 p2">
+                <div class="name text-large">Learn To Thrive</div>
+                <div class="role text-mid" style="text-transform: lowercase;">Teacher/Mentor</div>
+                <div class="duration text-mid">March '21 - October '21</div>
+                <div class="tech-stack text-mid">DSA, Competitive Programming, Teaching</div>
+            </div>
+            <div class="col-lg-12">
+                <div class="experience-text text-small">
+                    Mentored and Taught college students C++ , Data Structures and algorithms and helped them prepare for coding rounds and interview for product based company. This involved teaching theory, followed by solving and walking through the solutions of some problems and doubt sessions for students as well.
 
-                    if (this.steps < 0) {
-                        return;
-                    }
+                    - Mentored and taught C++ and DSA to college students preparing for internships and placements.
 
-                    fill(flyBoxColors[this.iteration]);
-                    noStroke();
-                    var dir = this.directions[this.currentDirection];
-                    rect(
-                        -dir.x * this.steps + origin.x + dir.x * origin.x - dir.x * this.offset * (this.size * 0.75),
-                        -dir.y * this.steps + origin.y + dir.y * origin.y + dir.y * this.offset * (this.size * 0.75),
-                        this.size, this.size);
-
-                    if (this.steps > max(windowWidth, windowHeight)) {
-                        var newDelay = this.getRandomDelay();
-                        this.steps = -flyBoxPause + this.delay - newDelay;
-                        this.delay = newDelay;
-                        this.currentDirection = (this.currentDirection + 1) % 4;
-                        this.iteration = (this.iteration + 1) % flyBoxColors.length;
-                    }
-                }
-            }
-        }
-
-        var ml4 = {};
-        ml4.opacityIn = [0, 1];
-        ml4.scaleIn = [0.2, 1];
-        ml4.scaleOut = 3;
-        ml4.durationIn = 800;
-        ml4.durationOut = 600;
-        ml4.delay = 1500;
-
-        anime.timeline({ loop: true })
-            .add({
-                targets: '.ml4 .letters-1',
-                opacity: ml4.opacityIn,
-                scale: ml4.scaleIn,
-                duration: ml4.durationIn
-            }).add({
-                targets: '.ml4 .letters-1',
-                opacity: 0,
-                scale: ml4.scaleOut,
-                duration: ml4.durationOut,
-                easing: "easeInExpo",
-                delay: ml4.delay
-            }).add({
-                targets: '.ml4 .letters-2',
-                opacity: ml4.opacityIn,
-                scale: ml4.scaleIn,
-                duration: ml4.durationIn
-            }).add({
-                targets: '.ml4 .letters-2',
-                opacity: 0,
-                scale: ml4.scaleOut,
-                duration: ml4.durationOut,
-                easing: "easeInExpo",
-                delay: ml4.delay
-            }).add({
-                targets: '.ml4 .letters-3',
-                opacity: ml4.opacityIn,
-                scale: ml4.scaleIn,
-                duration: ml4.durationIn
-            }).add({
-                targets: '.ml4 .letters-3',
-                opacity: 0,
-                scale: ml4.scaleOut,
-                duration: ml4.durationOut,
-                easing: "easeInExpo",
-                delay: ml4.delay
-            }).add({
-                targets: '.ml4',
-                opacity: 0,
-                duration: 50,
-                // delay: 500
-            });
-
-        var textWrapper = document.querySelector('.ml31');
-        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-        anime.timeline({ loop: true })
-            .add({
-                targets: '.ml31 .letter',
-                opacity: [0, 1],
-                easing: "easeInOutQuad",
-                duration: 225,
-                delay: (el, i) => 35 * (i + 1)
-            }).add({
-                targets: '.ml31',
-                opacity: 0,
-                duration: 1000,
-                easing: "easeOutExpo",
-                delay: 1000
-            });
-        var textWrapper = document.querySelector('.ml32');
-        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-        anime.timeline({ loop: true })
-            .add({
-                targets: '.ml32 .letter',
-                opacity: [0, 1],
-                easing: "easeInOutQuad",
-                duration: 225,
-                delay: (el, i) => 35 * (i + 1)
-            }).add({
-                targets: '.ml32',
-                opacity: 0,
-                duration: 1000,
-                easing: "easeOutExpo",
-                delay: 1000
-            });
-        var textWrapper = document.querySelector('.ml33');
-        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-        anime.timeline({ loop: true })
-            .add({
-                targets: '.ml33 .letter',
-                opacity: [0, 1],
-                easing: "easeInOutQuad",
-                duration: 225,
-                delay: (el, i) => 35 * (i + 1)
-            }).add({
-                targets: '.ml33',
-                opacity: 0,
-                duration: 1000,
-                easing: "easeOutExpo",
-                delay: 1000
-            });
-        var textWrapper = document.querySelector('.ml34');
-        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-        anime.timeline({ loop: true })
-            .add({
-                targets: '.ml34 .letter',
-                opacity: [0, 1],
-                easing: "easeInOutQuad",
-                duration: 225,
-                delay: (el, i) => 35 * (i + 1)
-            }).add({
-                targets: '.ml34',
-                opacity: 0,
-                duration: 1000,
-                easing: "easeOutExpo",
-                delay: 1000
-            });
-    </script>
-
+                    - Conducting doubt sessions and teaching topics varying across Data structure, Algorithms, Maths etc.
+                </div>
+            </div>
+            
+        </div>
+    </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- LETTERING -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+<!-- ANIME JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<!-- Particle JS -->
+<script src="particles.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src="app.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+<script>
+    var textWrapper = document.querySelector('.ml11 .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({ loop: true })
+        .add({
+            targets: '.ml11 .line',
+            scaleY: [0, 1],
+            opacity: [0.5, 1],
+            easing: "easeOutExpo",
+            duration: 700
+        })
+        .add({
+            targets: '.ml11 .line',
+            translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+            easing: "easeOutExpo",
+            duration: 700,
+            delay: 100
+        }).add({
+            targets: '.ml11 .letter',
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 600,
+            offset: '-=705',
+            delay: (el, i) => 34 * (i + 1)
+        }).add({
+            targets: '.ml11',
+            opacity: 0,
+            duration: 1000,
+            easing: "easeOutExpo",
+            delay: 1000
+        });
+</script>
 
 </html>
